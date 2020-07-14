@@ -1,0 +1,35 @@
+title: "YEN"
+subtitle: "Youth Empowring Nation (YEN) - NPO"
+thumbnail: "/assets/img/projects/yen/thumbnail.png"
+banner: "/assets/img/projects/yen/header.png"
+overview: |
+    A website created to support the activites of a NPO of 'Youth Empowering Nation' in marketing and advertising.
+roles: "Sole developer and designer"
+links:
+    - label: "GitHub"
+      link: "https://github.com/soo1017/yen"
+tools:
+    - NodeJS
+    - MongoDB
+    - Mongoose
+    - HTML5
+    - CSS
+    - Handlebar
+    - jQuery
+    - Ajax
+    - Javascript
+description: |
+    This website is created to support the online activites of a Non Profit Organization 'Youth Empowering Nation' that try to reach out to the public, manage the chapters in school, and take donations.
+details:
+    - title: "Youth Empowering Nation"
+      subsections:
+          - text: |
+              This website mainly promotes the following activities of the Non Profit Organization of 'Youth Empowering Nation'.<br>
+              <br>
+              Reaching out to community and school in order for more youth to join YEN to empower more developing nations, as of now mostly focused on Haiti.<br>
+              Informing stakeholders and donors of YEN's activities in Haiti.<br>
+              Online donation can be possbile thru the YEN website.
+            images:
+                - url: "/assets/img/projects/yen/main_screen1.jpg"
+                  caption: Haiti Bus
+                  setname: screens

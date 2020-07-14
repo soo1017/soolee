@@ -1,0 +1,79 @@
+title: "FaveU"
+subtitle: "Connecting those are interested in each other"
+thumbnail: "/assets/img/projects/faveu/thumbnail.png"
+banner: "/assets/img/projects/faveu/header.jpg"
+overview: |
+    A social entertainment mobile application that allows you to discreetly connect with someone from your circle of friends who holds a special place in your heart. Whether it is for checking friendships, affirming romantic interests, or playing harmless jokes, it is a fun way to find out if your person of interest has mutual feelings towards you.
+roles: "Creator and Software developer"
+links: 
+    - label: "GitHub - Android"
+      link: "https://github.com/soo1017/faveu-android"
+    - label: "GitHub - iOS"
+      link: "https://github.com/soo1017/faveu-ios"
+    - label: "GitHub - Backend"
+      link: "https://github.com/soo1017/faveu-backend"
+tools:
+    - Android
+    - iOS
+    - NodeJS
+    - MongoDB
+    - Mongoose
+    - Postman
+    - Cordova
+    - HTML5
+    - Handlebar
+    - CSS
+    - jQuery
+    - Ajax
+    - Javascript
+    - Amazon Web Services Elastic Beanstalk
+description: |
+    Probe: Covertly investigate their feelings towards you by concealing yourself among the list of friends or acquaintances.<br>
+    <br>
+    Discover: Find out directly from them whether they reciprocate your feelings. Did they choose you, or did they choose someone else? <br>
+    <br>
+    Connect: When your hearts align, connect with each other in ways more solidly and intimately than ever before. If your hearts don't align, it remains a secret so there is no harm done to your original relationship.
+details:
+    - title: "How It Works"
+      subsections:
+          - text: |
+              Step 1: Get the contact info (email) of the one (your FaveU) whose heart you want to investigate.<br>
+              <br>
+              Step 2: Get the names of your FaveU’s friends. They will be your "competition". Generate a selection list with your name and your "competition" names.<br>
+              <br>
+              Step 3: Send the list to your FaveU for them to pick their favorite from the list.<br>
+              <br>
+              Step 4: Wait for your FaveU to make a selection.<br>
+              <br>
+              Step 5: If you are picked, you are matched with your FaveU. Then you can contact to your FaveU thru mail or invitation to chatting. Otherwise, your FaveU’s selection remains a secret.
+            images:
+                - url: "/assets/img/projects/faveu/main_screen1.png"
+                  caption: Pick Your FaveU
+                  setname: screens
+                - url: "/assets/img/projects/faveu/main_screen2.png"
+                  caption: Poke FaveU
+                  setname: screens
+    - title: "An Example"
+      subsections:
+          - text: |
+              A person, Jackson, has positive feelings towards Emma, someone in his circle of friends; however, Jackson doesn't know whether Emma shares the same feelings towards him. Hence, he decides to use FaveU and send a FaveU to Emma in order to know Emma's feelings discreetly.<br>
+              <br>
+              In this example, Emma will become Jackson's "Your FaveU". Jackson knows that Emma's other friends include Lucas, Caden, and Noah. In this case, Lucas, Caden, and Noah will be Jackson's "competition". Jackson provides his name, email, and selected avatar for FaveU's user information with his selected avatar and Emma's name and email for his "Your FaveU" in the app. For the "competition" list, Jackson puts Lucas, Caden, and Noah (their emails are not needed) with their selected avatars.<br>
+              <br>
+              After Jackson completes his submission, FaveU emails Emma with a selection list of Jackson, Lucas, Caden, and Noah in a random order, and if Emma already has the app downloaded, will send a notification to open the selection list in the app directly as well. Emma cannot and will not know who sent the FaveU to her, unless Emma selects Jackson - in which case, FaveU will let both Jackson and Emma know that the match succeeded.<br>
+              <br>
+              If Emma selects Lucas, Caden, or Noah (and not the original FaveU's sender, Jackson), FaveU will simply let Jackson know that the match failed, and not the details of Emma's pick, to protect Emma's privacy. If Emma does not wish to use FaveU's service, there is an option to reject the service. FaveU is designed not to harm the original relationship even if a match fails. FaveU can be used as a simple and harmless joke, between friends, or for romantic interests.
+            images:
+                - url: "/assets/img/projects/faveu/main_screen3.png"
+                  caption: Send Your Emotion
+                  setname: screens
+                - url: "/assets/img/projects/faveu/main_screen4.png"
+                  caption: Connect
+                  setname: screens
+            # images:
+            #     - url: "/assets/img/projects/monita/main_screen2.png"
+            #       caption: Information for a single node
+            #       setname: screens
+            #     - url: "/assets/img/projects/monita/main_screen3.png"
+            #       caption: Navigating a node's family tree in the modal window
+            #       setname: screens

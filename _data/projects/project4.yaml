@@ -1,0 +1,33 @@
+title: "Food Truck 3"
+subtitle: "Food Truck - ASP.NET MVC"
+thumbnail: "/assets/img/projects/foodtruck3/thumbnail.png"
+banner: "/assets/img/projects/foodtruck3/header.png"
+overview: |
+    A responsive and dynamic web application to implement the online-order of food truck designed by ASP.NET.
+roles: "Sole developer and designer"
+links:
+    - label: "GitHub"
+      link: "https://github.com/soo1017/foodtruck3"
+tools:
+    - ASP.NET
+    - Postman
+    - HTML5
+    - CSS
+    - Javascript
+description: |
+    A web application that supports online-order of food truck. An owner of the web application can update menu and their quantity only with admin authority anytime they want. All menu and their quantity are automatically controlled based on an owner's input and online order. If any menu runs out, the application does not take any online order more. Customers can see any updated data and process their payment using credit card. It is pretty much similar with any web application out there that handles online order. It is implemented by ASP.NET MVC.
+details:
+    - title: "Food Truck Online Order"
+      subsections:
+          - text: |
+              The web application has the following features.<br>
+              <br>
+              It is a responsive (mobile-friendly) and dynamic web application that is made by AngularJS, NodeJS, and MongoDB.<br> 
+              Online credit card payment system is implemented by using Stripe.<br>
+              Menus, their picture, and their quantity are updated and managed automatically after their initial data is uploaded by an owner of the application with only admin authority for security purpose.<br>
+              All data (the total number of online order, the number of each menu order, the amount of money by online-order, ...) related to online order is automatically collected and stored into DB with MongoDB. The data can be seen and managed anytime in the admin webpages with an admin authority.<br>
+              Customers can see the updated quantity of menu when making an online order. When a menu runs out, the menu will have the sign "out of the stock".
+            images:
+                - url: "/assets/img/projects/foodtruck3/main_screen1.gif"
+                  caption: Screen Shot 1
+                  setname: screens
