@@ -89,6 +89,9 @@ a:hover {
 .thumb-left-col {
     padding-left: $thumb-padding-horz;
 }
+.thumb-left-col-spare {
+    padding-left: 1.75rem;
+}
 
 .thumb-right-col {
     padding-right: $thumb-padding-horz;
@@ -96,6 +99,9 @@ a:hover {
 
 .left-col {
     text-align: left;
+}
+.left-col-spare {
+    padding-left: 1rem;
 }
 
 .centered-col {

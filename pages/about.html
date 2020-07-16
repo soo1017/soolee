@@ -8,7 +8,7 @@ title: about
 <div class="row header-row" id="header-bg">
     <div class="header-tint">
         <div class="col header-col">
-            <h1 class="header-title">Michael C. Lee</h1>
+            <h1 class="header-title">{{ site.data.aboutme.name }}</h1>
             <h3 class="header-subtitle">{{ site.data.aboutme.subtitle }}</h3>
         </div>
     </div>
@@ -78,11 +78,11 @@ title: about
             <div class="about-thumbnail-div">
                 <img class="thumbnail" src="{{ site.data.aboutme.hobbies.thumbnail }}">
             </div>
-            <div class="col thumb-left-col">
+            <div class="col thumb-left-col-spare">
                 <div class="row overview-project-content-row">
                     <div class="col">
                         <h2 class="subsection-title overview-project-title">{{ site.data.aboutme.hobbies.subtitle }}</h2>
-                        <div class="left-col">
+                        <div class="left-col-spare">
                             <p>{{ site.data.aboutme.hobbies.body }}</p>
                         </div>
                     </div>

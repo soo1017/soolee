@@ -1,4 +1,5 @@
 url: "/about"
+name: "Ilsoo Lee"
 headshot: /assets/img/headshot_soo.png
 subtitle: Full Stack Developer
 about_title: "About Me"
@@ -8,7 +9,7 @@ why:
     quote: |
         "Let us not grow weary of doing good, for in due season we will reap, if we do not give up"
     body: |
-        After more than a decade of my work in the industry of silicon testing, I wanted to start up a company with my colleagues to bring up one idea of mobile application to fruition in the field of entertainment. As this product would be my first software product, I wanted it made as perfect as possible in all aspects, not with any frustration and flaw. So I decided to develop it myself by searching and digging up in the area of mobile application development even though I had never worked on developing any mobile application.<br>
+        After more than a decade of my work in the industry of silicon testing, I wanted to start up a company with my colleagues to bring up one idea of mobile application to fruition in the field of entertainment. As this product would be my first software product, I wanted it made as perfect as possible in all aspects, not with any frustration and flaw. So I decided to develop it myself by searching and digging up in the area of mobile application development with a hope of every development under my control even though I had never worked on developing any mobile application before.<br>
         <br>
         It was my starting point to meet all mobile development tools, frameworks, and programming languages. I picked 'Cordova' as the tool that would, I thought, speed up the development for both Android and iOS instead of learning and employing their own tools and programming languages. It naturally led me into being able to explore front-end anf back-end of mobile and web applications at the same time in order to resolve technical issues and extend my understanding on them. Without full undestanding on any point in the development, I believed it was meaningless and vain for me and the development as well.<br>
         <br>
@@ -43,7 +44,8 @@ skills:
               - jQuery (JavaScript)
               - AngularJS (JavaScript)
               - Bootstrap (CSS, JavaScript)
-              - Android Studio (Java)
+              - Android Studio
+              - Xcode
               - Jekyll (HTML Templating)
               - NodeJS (with Redis)
               - Express
