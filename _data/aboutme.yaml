@@ -1,6 +1,6 @@
 url: "/about"
 name: "Ilsoo Lee"
-headshot: /assets/img/headshot_soo.png
+headshot: "/assets/img/headshot_soo.png"
 subtitle: Full Stack Developer
 about_title: "About Me"
 about_link: "More About Me"
