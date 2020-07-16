@@ -19,7 +19,7 @@ phone: +1 (510) 396-4657
 description: A portfolio to showcase the professional web & mobile application projects worked on by Soo Lee.
 # url: "https://github.com/soo1017/soolee" # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://soo1017.github.io/soolee" # the base hostname & protocol for your site, e.g. http://example.com
-linkedin: ilsoolee
+linkedin: "https://www.linkedin.com/in/il-soo-lee-20866323"
 github: soo1017
 
 # Exclude from processing.
