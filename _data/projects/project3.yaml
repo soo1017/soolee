@@ -1,7 +1,7 @@
 title: "Food Truck 2"
 subtitle: "Food Truck - AngularJS & NodeJS"
-thumbnail: "/assets/img/projects/foodtruck2/thumbnail.png"
-banner: "/assets/img/projects/foodtruck2/header.png"
+thumbnail: "https://github.com/soo1017/assets/img/projects/foodtruck2/thumbnail.png"
+banner: "https://github.com/soo1017/assets/img/projects/foodtruck2/header.png"
 overview: |
     A responsive and dynamic web application to implement the online-order of food truck designed by AngularJS in front-end and NodeJS in back-end.
 roles: "Sole developer and designer"
