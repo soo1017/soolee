@@ -28,11 +28,13 @@ tools:
     - Javascript
     - Amazon Web Services Elastic Beanstalk
 description: |
-    Probe: Covertly investigate their feelings towards you by concealing yourself among the list of friends or acquaintances.<br>
+    A social entertainment mobile application that allows you to discreetly connect with someone from your circle of friends who holds a special place in your heart. Whether it is for checking friendships, affirming romantic interests, or playing harmless jokes, it is a fun way to find out if your person of interest has mutual feelings towards you.<br>
     <br>
-    Discover: Find out directly from them whether they reciprocate your feelings. Did they choose you, or did they choose someone else? <br>
+    <strong>Probe</strong>: Covertly investigate their feelings towards you by concealing yourself among the list of friends or acquaintances.<br>
     <br>
-    Connect: When your hearts align, connect with each other in ways more solidly and intimately than ever before. If your hearts don't align, it remains a secret so there is no harm done to your original relationship.
+    <strong>Discover</strong>: Find out directly from them whether they reciprocate your feelings. Did they choose you, or did they choose someone else? <br>
+    <br>
+    <strong>Connect</strong>: When your hearts align, connect with each other in ways more solidly and intimately than ever before. If your hearts don't align, it remains a secret so there is no harm done to your original relationship.
 details:
     - title: "How It Works"
       subsections:
