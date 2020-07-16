@@ -47,10 +47,10 @@ details:
               <br>
               Step 5: If you are picked, you are matched with your FaveU. Then you can contact to your FaveU thru mail or invitation to chatting. Otherwise, your FaveU’s selection remains a secret.
             images:
-                - url: "/assets/img/projects/faveu/main_screen1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen1.png"
                   caption: Pick Your FaveU
                   setname: screens
-                - url: "/assets/img/projects/faveu/main_screen2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen2.png"
                   caption: Poke FaveU
                   setname: screens
     - title: "An Example"
@@ -64,16 +64,16 @@ details:
               <br>
               If Emma selects Lucas, Caden, or Noah (and not the original FaveU's sender, Jackson), FaveU will simply let Jackson know that the match failed, and not the details of Emma's pick, to protect Emma's privacy. If Emma does not wish to use FaveU's service, there is an option to reject the service. FaveU is designed not to harm the original relationship even if a match fails. FaveU can be used as a simple and harmless joke, between friends, or for romantic interests.
             images:
-                - url: "/assets/img/projects/faveu/main_screen3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen3.png"
                   caption: Send Your Emotion
                   setname: screens
-                - url: "/assets/img/projects/faveu/main_screen4.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen4.png"
                   caption: Connect
                   setname: screens
             # images:
-            #     - url: "/assets/img/projects/monita/main_screen2.png"
+            #     - url: "https://soo1017.github.io/soolee/assets/img/projects/monita/main_screen2.png"
             #       caption: Information for a single node
             #       setname: screens
-            #     - url: "/assets/img/projects/monita/main_screen3.png"
+            #     - url: "https://soo1017.github.io/soolee/assets/img/projects/monita/main_screen3.png"
             #       caption: Navigating a node's family tree in the modal window
             #       setname: screens

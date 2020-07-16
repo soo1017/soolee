@@ -23,7 +23,7 @@ title: about
         </div>
         <div class="row">
             <div class="about-thumbnail-div">
-                <img class="thumbnail" src="{{ site.data.aboutme.education.thumbnail }}">
+                <img class="thumbnail" src="{{ site.url }}{{ site.data.aboutme.education.thumbnail }}">
             </div>
             <div class="col thumb-left-col">
                 <div class="row overview-project-content-row">
@@ -48,7 +48,7 @@ title: about
         {% for skill in site.data.aboutme.skills.skills %}
         <div class="row">
             <div class="about-thumbnail-div">
-                <img class="thumbnail" src="{{ skill.thumbnail }}">
+                <img class="thumbnail" src="{{ site.url }}{{ skill.thumbnail }}">
             </div>
             <div class="col thumb-left-col">
                 <div class="row overview-project-content-row">
@@ -76,7 +76,7 @@ title: about
         </div>
         <div class="row">
             <div class="about-thumbnail-div">
-                <img class="thumbnail" src="{{ site.data.aboutme.hobbies.thumbnail }}">
+                <img class="thumbnail" src="{{ site.url }}{{ site.data.aboutme.hobbies.thumbnail }}">
             </div>
             <div class="col thumb-left-col-spare">
                 <div class="row overview-project-content-row">
