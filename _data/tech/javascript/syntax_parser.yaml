@@ -3,7 +3,7 @@ url: "https://soo1017.github.io/soolee/tech"
 subtitle: "Your life flourishes with everyday programming language learning"
 thumbnail: "https://soo1017.github.io/soolee/assets/img/learnings/tech/thumbnail.png"
 banner: "https://soo1017.github.io/soolee/assets/img/learnings/tech/header.png"
-content_title: "Programming Language Learning"
+content_title: "Javascript"
 details:
     - proglang: "Javascript"
       topics:
@@ -15,7 +15,7 @@ details:
       topics:
         - link: "https://soo1017.github.io/soolee/tech/python/py_parser"
           name: "Py Parser"
-        - link: "https://soo1017.github.io/soolee/learnings/tech/python/py_topic2"
+        - link: "https://soo1017.github.io/soolee/tech/python/py_topic2"
           name: "Py Topic 2"
 
     
