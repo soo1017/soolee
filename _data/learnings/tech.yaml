@@ -7,15 +7,17 @@ content_title: "Programming Language Learning"
 details:
     - proglang: "Javascript"
       topics:
+        - link: "https://soo1017.github.io/soolee/tech/javascript/js_code_start"
+          name: "What happens when a JS code starts?"
         - link: "https://soo1017.github.io/soolee/tech/javascript/syntax_parser"
           name: "Syntax Parser"
-        - link: "https://soo1017.github.io/soolee/tech/javascript/java_topic2"
-          name: "Java Topic 2"
-    - proglang: "Python"
-      topics:
-        - link: "https://soo1017.github.io/soolee/tech/python/py_parser"
-          name: "Py Parser"
-        - link: "https://soo1017.github.io/soolee/learnings/tech/python/py_topic2"
-          name: "Py Topic 2"
+        - link: "https://soo1017.github.io/soolee/tech/javascript/lexical_environment"
+          name: "Lexical Environment"
+    # - proglang: "Python"
+    #   topics:
+    #     - link: "https://soo1017.github.io/soolee/tech/python/py_parser"
+    #       name: "Py Parser"
+    #     - link: "https://soo1017.github.io/soolee/learnings/tech/python/py_topic2"
+    #       name: "Py Topic 2"
 
     

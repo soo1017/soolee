@@ -44,18 +44,18 @@ skills:
               - jQuery (JavaScript)
               - AngularJS (JavaScript)
               - Bootstrap (CSS, JavaScript)
-              - Android Studio
-              - Xcode
               - Jekyll (HTML Templating)
               - NodeJS (with Redis)
               - Express
               - Mongoose
               - ASP.net
-              - Cordova
         - title: DB & Tools
           thumbnail: "/assets/img/about/tool_thumbnail.png"
           items:
+              - Cordova
               - MongoDB
+              - Android Studio
+              - Xcode
               - GitHub, GitHub Pages
               - Amazon Web Services
               - Postman

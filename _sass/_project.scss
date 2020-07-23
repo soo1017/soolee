@@ -1,6 +1,7 @@
 @import 'globals';
 
-$single-image-pad: 25%;
+$single-image-pad: 2%;
+// $single-image-pad: 25%;
 $transition-time: 0.25s;
 $max-height: 25rem;
 
@@ -61,8 +62,10 @@ $max-height: 25rem;
     }
 
     .single-image-col {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        // padding-left: 0px;
+        // padding-right: 0px;
     }
 
     .project-image-pair {
