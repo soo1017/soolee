@@ -1,0 +1,40 @@
+title: "Tech Learning"
+url: "https://soo1017.github.io/soolee/tech/javascript/js_code_start"
+subtitle: "Your life flourishes with everyday programming language learning"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
+content_title: "Undefined"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              'undefined' is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value 'undefined' (from developer.mozilla.org).
+    - title: "Description"
+      subsections:
+          - text: |
+              'undefined' is a reserved keyword for Javascript. A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. If a variable is declared, but not assigned with any value, it is set as 'undefined'. It is like that a variable has a memory space for itself, but not any value in the memory.<br>
+              Please note that 'undefined' in JS is different with 'not defined' because 'not defined' is an error in JS. 'not defined' means that variables or others fail to be declared properly. No memory space is reserved for them. Javacsript engine cannot find any info of variables or others that are set as 'not defined'.<br>
+              <br>
+              The code in the example below depicts the defintion of 'undefined' clearly.<br>
+              <br>
+              ---------------------------------<br>
+              var x<br>
+              <br>
+              if (typeof x === "undefined") {<br>
+                console.log("x is undefined")<br>
+              } else {<br>
+                console.log("x is defined")<br>
+              }<br>
+              ---------------------------------<br>
+              <br>
+
+              When the above code is run, the result prints out 'x is undefined'. The variable 'x' is set as 'undefined'. As stated early, the JS engine takes up a memory space for 'x' when running the statement 'var x', but does not assign any value for it. It is like a empty memory space for 'x'. When the memory space of variable 'x' is checked, 
+
+    #         images:
+    #             - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen1.png"
+    #               caption: Pick Your FaveU
+    #               setname: screens
+    #             - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen2.png"
+    #               caption: Poke FaveU
+    #               setname: screens
+
+    

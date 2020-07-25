@@ -32,6 +32,11 @@ $max-height: 25rem;
 .project-image-pair {
     max-width: 100%;
     max-height: $max-height;
+    
+}
+.single-image-col img {
+    display: block;
+    margin: auto !important;
 }
 
 .project-image-pair:hover {

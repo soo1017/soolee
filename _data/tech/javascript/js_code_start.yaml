@@ -21,11 +21,13 @@ details:
           - text: |
               When you write a code like below,<br>
               <br>
+              ---------------------------------<br>
               var a = "Hello"<br>
               <br>
               function b() {<br>
                 console.log('Hi') <br>
               }<br>
+              ---------------------------------<br>
               <br>
               The variable 'a' and function 'b' would be a global object and they are attached to the global object 'window'. You can see it from the picture below where the circled parts show that the variable 'a' and the function 'b' are attached to the 'window' object when it is unfolded.
             images:
@@ -36,7 +38,7 @@ details:
               As mentioned early, more execution contexts are created and come. When there is a function in the code, a execution context will be created for the function. Unlike gloabl execution context, this execution context will have a link 'outer environment' to reach out outside the function. The picture below shows the execution context created for the fucntion.
             images:
                 - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/js_code_start/execution_context4func.png"
-                  caption: Execution Context for Function
+                  caption: Execution Context (Not Global)
                   setname: screens
     #             - url: "https://soo1017.github.io/soolee/assets/img/projects/faveu/main_screen2.png"
     #               caption: Poke FaveU

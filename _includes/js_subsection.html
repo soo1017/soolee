@@ -8,6 +8,8 @@
             </p>
         </div>
     </div>
+
+    <!-- For Image -->
     {% if section.images %}
         {% assign num_images = section.images | size %}
         {% assign leftover = num_images | modulo: 2 %}
@@ -70,4 +72,62 @@
         </div>
         {% endfor %}
     {% endif %}
+
+<!-- For Code -->
+    {% if section.codes %}
+        {% assign num_codes = section.codes | size %}
+        {% assign leftover = num_codes | modulo: 2 %}
+        {% assign num_rows = num_codes | divided_by: 2 | plus: leftover %}
+        {% assign code_index = 0 %}
+        {% for row in (1..num_rows) %}
+        <div class="row subsection-row">
+            {% assign codes_left = num_codes | minus: code_index %}
+            {% assign index_mod = code_index | modulo: 2 %}
+            {% if codes_left == 1 and index_mod == 0 %}
+            <!-- Single image row, last image remaining -->
+            <div class="col single-image-col">
+                <div class="row project-image-row">
+                    <div class="centered-col tint-hover">
+                        <script src="{{section.codes[code_index].url}}"></script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col centered-col">
+                        <p class="image-caption">{{section.codes[code_index].caption}}</p>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <!-- Two image row, every other image -->
+            <div class="col-lg-6 image-pair-col">
+                <div class="row project-image-row">
+                    <div class="col centered-col tint-hover">
+                        <script src="{{section.codes[code_index].url}}"></script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col centered-col">
+                        <p class="image-caption">{{section.codes[code_index].caption}}</p>
+                    </div>
+                </div>
+            </div>
+            {% assign code_index = code_index | plus: 1 %}
+            <div class="col-lg-6">
+                <div class="row project-image-row">
+                    <div class="col centered-col tint-hover">
+                        <script src="{{section.codes[code_index].url}}"></script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col centered-col">
+                        <p class="image-caption">{{section.codes[code_index].caption}}</p>
+                    </div>
+                </div>
+            </div>
+            {% assign code_index = code_index | plus: 1 %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    {% endif %}
+
 {% endfor %}
