@@ -1,0 +1,37 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/undefined_null"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Difference between 'undefined' and 'null'"
+details:
+    - title: "Definition & Description"
+      subsections:
+          - text: |
+              In JavaScript, 'undefined' is a type, whereas 'null' an object.<br>
+              <br>
+              <strong>undefined</strong>: It means a variable declared, but no value has been assigned a value.<br>
+              <br>
+              ---------------------------<br>
+              <br>
+              var demo;<br>
+              alert(demo); //shows undefined<br>
+              alert(typeof demo); //shows undefined<br>
+              <br>
+              <br>
+              > undefined<br>
+              <br>
+              ---------------------------<br>
+              <br>
+              <strong>null</strong>: 'null' is an assignment value. You can assign it to a variable.<br>
+              <br>
+              ---------------------------<br>
+              <br>
+              var demo = null;<br>
+              alert(demo); //shows null<br>
+              alert(typeof demo); //shows object<br>
+              <br>
+              <br>
+              > object<br>
+              <br>
+              ---------------------------<br>
+              <br>

@@ -1,0 +1,47 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/value_reference"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "By Value & By Reference"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              To see how the memory storage works differently for primitives and objects (including functions) when assigning them to another equivalent one.
+    - title: "Description"
+      subsections:
+          - text: |
+              For a primitive (Boolean, String, Number, Null, Undefined, Symbol) is assigned to a variable, the variable will have an address of memory space of the primitive. It is explained previously. When the variable is assigned to another varible by the equal "=", the new variable will have a copy of the primitive in a different memory space. The new variable will a different memory address from the existing variable, but they have the same value. The image below shows it. 
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/value_reference/value_reference1.png"
+                  caption: By Value
+                  setname: screens
+          - text: |
+              For an object (including functions) is assigned to a variable, the variable will have an address of memory space of the object like primitives. When the variable is assigned to another varible by the equal "=", the new variable will point to the same memory address where the existing varible points to. I think that using address reference approach instead of saving same value in another physical memory space could save overall memory usage because objects (including functions) is larger than primitive to save them.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/value_reference/value_reference2.png"
+                  caption: By Reference
+                  setname: screens
+          - text: |
+              The following codes show the difference of memory usage from primitive and objects when assigned to another variable.<br>
+              <br>
+              The first code shows the memory usage by value.
+            codes:
+                - url: "https://gist.github.com/soo1017/afa1f9b2b8228e95a8361fe0c0ff716f.js"
+                  caption: By Value
+          - text: |
+              The code below shows the memory usage by reference.
+            codes:
+                - url: "https://gist.github.com/soo1017/d59a812e5c921d4c5c301e874f759aa6.js"
+                  caption: By Reference
+          - text: |
+              The following shows the case with objects as a parameter
+            codes:
+                - url: "https://gist.github.com/soo1017/76b6bf273cbf7a7b30fa3c0edbea90da.js"
+                  caption: By Reference - as Parameter
+          - text: |
+              The euqal operator '=' sets up new memory space (new memory address)
+            codes:
+                - url: "https://gist.github.com/soo1017/335731b75e0da17bb3ee3a784b1d4283.js"
+                  caption: New Memory Address with '='
+         

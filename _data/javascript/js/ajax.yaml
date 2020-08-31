@@ -1,0 +1,210 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/ajax"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "AJAX"
+details:
+    - title: "Definition (from w3schools.com)"
+      subsections:
+          - text: |
+              AJAX stands for 'Asynchronous JavaScript And XML'. AJAX is not a programming language. AJAX just uses a combination of a browser built-in 'XMLHttpRequest' object (to request data from a web server) and JavaScript and HTML DOM (to display or use the data).<br>
+              <br>
+              AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+    - title: "Description"
+      subsections:
+          - text: |
+              <br>
+              <br>
+              <strong>***** XMLHttpRequest *****</strong><br>
+              <br>
+              The keystone of AJAX is the XMLHttpRequest object, which is a member function (object) of the global object 'window'. All modern browsers support the XMLHttpRequest object. The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page. All modern browsers (Chrome, Firefox, IE7+, Edge, Safari, Opera) have a built-in XMLHttpRequest object.<br>
+              Syntax for creating an XMLHttpRequest object.<br>
+              <br>
+              var xhttp = new XMLHttpRequest();<br>
+              <br>
+              <strong>Access Across Domains</strong>: For security reasons, modern browsers do not allow access across domains. This means that both the web page and the XML file it tries to load, must be located on the same server.<br>
+              <br>
+              <strong>Older Browsers (IE5 and IE6)</strong>: Old versions of Internet Explorer (5/6) use an ActiveX object instead of the XMLHttpRequest object. To handle IE5 and IE6, check if the browser supports the XMLHttpRequest object, or else create an ActiveX object.<br>
+              <br>
+              var xhttp = new ActiveXObject("Microsoft.XMLHTTP");<br>
+            codes: 
+                - url: "https://gist.github.com/soo1017/4b64f06d5539daed602cfab8775613c0.js"
+                  caption: XMLHttpRequest with Old Browsers
+          - text: |
+              <br>
+              <br>
+              <strong>***** XMLHttpRequest Object Methods *****</strong><br>
+              <br>
+              <strong>new XMLHttpRequest()</strong> => Creates a new XMLHttpRequest object<br>
+              <strong>abort()</strong> => Cancels the current request<br>
+              <strong>getAllResponseHeaders()</strong> => Returns header information<br>
+              <strong>getResponseHeader()</strong> => Returns specific header information<br>
+              <br>
+              <strong>open(method, url, async, user, psw)</strong> => Specifies the request; <strong>method</strong>: the request type GET or POST; <strong>url</strong>: the file location; <strong>async</strong>: true (asynchronous) or false (synchronous); <strong>user</strong>: optional user name; <strong>psw</strong>: optional password<br>
+              <br>
+              <strong>send()</strong> => Sends the request to the server. Used for GET requests<br>
+              <strong>send(string)</strong> => Sends the request to the server. Used for POST requests<br>
+              <strong>setRequestHeader()</strong> => Adds a label/value pair to the header to be sent.
+          - text: |
+              <br>
+              <br>
+              <strong>***** XMLHttpRequest Object Properties *****</strong><br>
+              <br>
+              <strong>onreadystatechange</strong> => Defines a function to be called when the readyState property changes<br>
+              <strong>readyState</strong> => Holds the status of the XMLHttpRequest. <strong>0</strong>: request not initialized, <strong>1</strong>: server connection established, <strong>2</strong>: request received, <strong>3</strong>: processing request, <strong>4</strong>: request finished and response is ready<br>
+              <strong>responseText</strong> => Returns the response data as a string<br>
+              <strong>responseXML</strong> => Returns the response data as XML data<br>
+              <br>
+              <strong>status</strong> => Returns the status-number of a request; <strong>200</strong>: "OK"; <strong>403</strong>: "Forbidden"; <strong>404</strong>: "Not Found"<br>
+              <br>
+              <strong>statusText</strong> => Returns the status-text (e.g. "OK" or "Not Found")
+          - text: |
+              <br>
+              <br>
+              <strong>***** Send a Request To a Server *****</strong><br>
+              <br>
+              To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+            codes: 
+                - url: "https://gist.github.com/soo1017/345decf616911e8d4e1c363b65fca13d.js"
+                  caption: Request to Server
+          - text: |
+              <br>
+              <br>
+              <strong>***** GET or POST? *****</strong><br>
+              <br>
+              GET is simpler and faster than POST, and can be used in most cases.<br>
+              However, always use POST requests when:<br>
+              <br>
+              * A cached file is not an option (update a file or database on the server).<br>
+              * Sending a large amount of data to the server (POST has no size limitations).<br>
+              * Sending user input (which can contain unknown characters), POST is more robust and secure than GET.
+          - text: |
+              <br>
+              <br>
+              <strong>***** GET Requests *****</strong><br>
+              <br>
+              If you want to send information with the GET method, add the information to the URL:
+            codes: 
+                - url: "https://gist.github.com/soo1017/60beaaa2d23fe946f65e2e9e9715f76b.js"
+                  caption: GET Request with Data
+          - text: |
+              <br>
+              <br>
+              <strong>***** POST Requests *****</strong><br>
+              <br>
+              To POST data like an HTML form, add an HTTP header with setRequestHeader(). Specify the data you want to send in the send() method:
+            codes: 
+                - url: "https://gist.github.com/soo1017/6f0b4f81a69e61cc63320fec9ca01f54.js"
+                  caption: POST Request with Data
+          - text: |
+              <br>
+              <br>
+              <strong>***** The url - A File On a Server *****</strong><br>
+              <br>
+              The url parameter of the open() method, is an address to a file on a server:<br>
+              <br>
+              xhttp.open("GET", "ajax_test.asp", true);<br>
+              <br>
+              The file can be any kind of file, like .txt and .xml, or server scripting files like .asp and .php (which can perform actions on the server before sending the response back).
+          - text: |
+              <br>
+              <br>
+              <strong>***** Asynchronous - True or False? *****</strong><br>
+              <br>
+              Server requests should be sent asynchronously. The async parameter of the open() method should be set to true:<br>
+              <br>
+              xhttp.open("GET", "ajax_test.asp", true);<br>
+              <br>
+              By sending asynchronously, the JavaScript does not have to wait for the server response, but can instead:<br>
+              <br>
+              * execute other scripts while waiting for server response<br>
+              * deal with the response after the response is ready<br>
+              <br>
+              <strong>Warning</strong>: Synchronous XMLHttpRequest (async = false) is not recommended because the JavaScript will stop executing until the server response is ready. If the server is busy or slow, the application will hang or stop. Synchronous XMLHttpRequest is in the process of being removed from the web standard, but this process can take many years. Modern developer tools are encouraged to warn about using synchronous requests and may throw an InvalidAccessError exception when it occurs.
+          - text: |
+              <br>
+              <br>
+              <strong>***** 'onreadystatechange' Property *****</strong><br>
+              <br>
+              With the XMLHttpRequest object you can define a function to be executed when the request receives an answer.<br>
+              The function is defined in the onreadystatechange property of the XMLHttpRequest object:
+            codes: 
+                - url: "https://gist.github.com/soo1017/d4761339524ca3638d87c0f291ff84a5.js"
+                  caption: Property 'onreadystatechange'
+          - text: |
+              <br>
+              <br>
+              <strong>***** Server Response *****</strong><br>
+              <br>
+              <br>
+              <strong> The 'onreadystatechange' Property *****</strong><br>
+              <br>
+              The 'readyState' property holds the status of the XMLHttpRequest.<br>
+              The 'onreadystatechange' property defines a function to be executed when the readyState changes.<br>
+              The 'status' property and the 'statusText' property holds the status of the XMLHttpRequest object.<br>
+              The 'onreadystatechange' function is called every time the 'readyState' changes.<br>
+              When 'readyState' is 4 and 'status' is 200, the response is ready:<br>
+              <br>
+              Note that the 'onreadystatechange' event is triggered four times (1-4), one time for each change in the readyState.<br>
+              <br>
+            codes: 
+                - url: "https://gist.github.com/soo1017/09277c0eac712eebd6b05b02ec2f6769.js"
+                  caption: Property 'onreadystatechange'
+          - text: |
+              <br>
+              <strong> Using a Callback Function *****</strong><br>
+              <br>
+              A callback function is a function passed as a parameter to another function.
+            codes: 
+                - url: "https://gist.github.com/soo1017/ec7ae9422eb10ffe602e4e99931475d1.js"
+                  caption: Callback Function
+          - text: |
+              <br>
+              <strong> The 'responseText' Property *****</strong><br>
+              <br>
+              Get the response data as a string.<br>
+              The responseText property returns the server response as a JavaScript string, and you can use it accordingly:
+            codes: 
+                - url: "https://gist.github.com/soo1017/59ca6909e995e5462a5bbf8776ff23b1.js"
+                  caption: 'responseText'
+          - text: |
+              <br>
+              <strong> The 'responseXML' Property *****</strong><br>
+              <br>
+              The XMLHttpRequest object has an in-built XML parser.<br>
+              The responseXML property returns the server response as an XML DOM object.
+            codes: 
+                - url: "https://gist.github.com/soo1017/85789afc11890cac734123484965a1cc.js"
+                  caption: 'responseXML'
+          - text: |
+              <br>
+              <strong> The 'getAllResponseHeaders()' Method *****</strong><br>
+              <br>
+              The getAllResponseHeaders() method returns all header information from the server response.
+            codes: 
+                - url: "https://gist.github.com/soo1017/e7da764f1f4524eab6d1ec647feb3cd1.js"
+                  caption: 'getAllResponseHeaders()'
+          - text: |
+              <br>
+              <strong> The 'getResponseHeader()' Method *****</strong><br>
+              <br>
+              The getResponseHeader() method returns specific header information from the server response.
+            codes: 
+                - url: "https://gist.github.com/soo1017/8f2e3e1ed5f7a948d8e7acdd9e2cc266.js"
+                  caption: 'getResponseHeader()'
+          - text: |
+              <br>
+              <strong> XML Example *****</strong><br>
+              <br>
+              AJAX can be used for interactive communication with an XML file.
+            codes: 
+                - url: "https://gist.github.com/soo1017/f36f5831b7953627cceec315d0b25ff9.js"
+                  caption: 'XML file'
+            
+
+                  
+              
+
+
+            
+          

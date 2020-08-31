@@ -1,0 +1,94 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/functions"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Functions"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              First Class Functions: Functions can do everything as other types (String, Boolean, Number, ...) can do in the Javascript.<br>
+              <br>
+              * Assign them to variables<br>
+              * Pass them around as function arguments<br>
+              * Create them on the fly (literal syntax)<br>
+              <br>
+              Functions are objects.
+    - title: "Description"
+      subsections:
+          - text: |
+              Fucntions are objects. Two pictures are pretty much similar in their structure. Functions have all the characteristics of objects. They can have 'primitive' property, 'object' property, and 'function' method like objects. Additionally, they have their name or no name, and invocable code. The invocable code is a property of functions.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/object/object1.png"
+                  caption: Object in JS
+                  setname: screens
+          - text: |
+
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/functions/function1.png"
+                  caption: Functions in JS
+                  setname: screens
+          - text: |
+              For your understanding, the code below shows that functions are objects by adding 'primitive' property, 'object' property, and 'function' method into a function.<br>
+              <br>
+              Let us see details of the code.<br>
+              <br>
+              * 'name' is a property of functions reserved to represent functions' name.<br>
+              * Create a primitive property 'firstname' of function 'greet'.<br>
+              * Create an object property 'address' of function 'greet'.<br>
+              * Create a fucntion method 'func1' of function 'greet'.<br>
+              <br>
+              Functions have the same behaviors as objects.
+            codes:
+                - url: "https://gist.github.com/soo1017/83dd0870f2058e6fdee9ecbea05a6a69.js"
+                  caption: Fucntins are Objects in JS
+          - text: |
+              <br>
+              <br>
+              <strong>***** Statement and Expression *****</strong><br>
+              <br>
+              Expression is a unit of code that results in a value. But it does not have to save to a variable.<br>
+              The followings show a function statement. This function is invocable by 'greet()'.
+            codes:
+                - url: "https://gist.github.com/soo1017/8893b02e2b8d62e9bb36e14911bb887b.js"
+                  caption: Fucntin Statement Code
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/functions/function2.png"
+                  caption: Fucntin Statement in JS
+                  setname: screens
+          - text: |
+              The followings show a function expression (usually with the equal sign '='). A variable is assigned by an anonymous function statement.<br>
+              This function is invocable by 'greet()'.<br>
+              The function statement in the expression is created in the creation phase of execution context and then assigned to a variable during the execution phase of execution context.
+            codes:
+                - url: "https://gist.github.com/soo1017/04274ec54a52df020008f70ddcbd4cd7.js"
+                  caption: Fucntin Expression Code
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/functions/function3.png"
+                  caption: Fucntin Expression in JS
+                  setname: screens
+          - text: |
+              Let us investigate more with the following code of function expression.<br>
+              As you know, the creation phase of execution context ignore the statement 'greet()', then save a memory space for a variable 'greet' with 'undefined' and save for an anonymous function. After moving into the execution phase of execution context, the JS engine executes 'greet()'. It realizes that the variable 'greet' is not invocable. It is why it prints out 'undefined is not a function'. Conclusively, function expressions do not work with 'hoisting' in Javascript.  
+            codes:
+                - url: "https://gist.github.com/soo1017/a51f4391b5fcdcbd71c71a35e4d429a7.js"
+                  caption: Function Expression and Hoisting
+          - text: |
+              <br>
+              <br>
+              <strong>***** Function Assigned to a Variable *****</strong><br>
+              <br>
+              Functions are objects. Objects can be assigned to a variable. Functions ddo the same thing. They can be assigned to a variable like objects.
+            codes:
+                - url: "https://gist.github.com/soo1017/11fbc102d006d08faacccce705683a97.js"
+                  caption: Function Assigned to a Variable
+          - text: |
+              <br>
+              <br>
+              <strong>***** Function Passed as a Parameter of Another Function *****</strong><br>
+              <br>
+              Functions are objects. So it can be passed as a parameter of another function. The following code shows it.
+            codes:
+                - url: "https://gist.github.com/soo1017/fdb4e4223471b6c6db45fcd202e5720e.js"
+                  caption: Function as a Parameter
+            

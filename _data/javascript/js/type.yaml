@@ -1,0 +1,119 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/type"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Javascript Type"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              This section discusses about Javascript data types and how they works.
+    - title: "Description"
+      subsections:
+          - text: |
+              <br><br>
+              <strong>***** Dynamic Typing *****</strong><br>
+              <br>
+              JavaScript has dynamic types. This means that the same variable can be used to hold different data types. The JS engine figures it out what kind of data type a variable holds while it is running the code.
+            codes: 
+                - url: "https://gist.github.com/soo1017/9e2036516cae35bbe1e440d09b3728a0.js"
+                  caption: Dynamic Typing
+          - text: |
+              <br><br>
+              <strong>***** Primitive Type *****</strong><br>
+              <br>
+              A type of data that represents a single value, that is, not an object(a pair of name/value) that has methods.<br>
+              All primitives are immutable, i.e., they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value can not be changed in the ways that objects, arrays, and functions can be altered.<br>
+              There are 6 primitive data types.<br>
+              <br>
+              <strong>* Undefined</strong>: => represent lack of existence. Never set a variable to 'undefined'.<br>
+              <strong>* Null</strong>: => represent lack of existence. OK to set a variable to 'null'.<br>
+              <strong>* Boolean</strong>: => true or false<br>
+              <strong>* Number</strong>: => One 'number' type. No 'interger' and 'floating number' in other languages.<br>
+              <strong>* String</strong>: => A sequence of characters.<br>
+              <strong>* Symbol</strong>: => In ES6.<br>
+              <br>
+              This example will help you understand the fact that primitive values are immutable.
+            codes: 
+                - url: "https://gist.github.com/soo1017/e919cacac326e2f2976acc087460e7ad.js"
+                  caption: Primitive is immutable, but replacable
+          - text: |
+              A primitive can be replaced, but it can't be directly altered.<br>
+              <br>
+              The following example will help you go through how JavaScript deals with Primitives.
+            codes: 
+                - url: "https://gist.github.com/soo1017/142ef906a41f2af73302e95624deeabc.js"
+                  caption: Primitive is immutable, but replacable
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive1.png"
+                  caption: Execution Context Stack - A GEC popped in ECS
+                  setname: screens
+          - text: |
+              The following descriptions explain about the above picture.<br>
+              <br>
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'let myVar = 5': => set a memory space for the variable 'myVar' wihtout assigning '5' in it. Set as 'undefined'.<br>
+              <strong>2.</strong> 'function addTwo() {...}': => set a memory space for the function 'addTwo()' to save its name, codes, ...<br> 
+              <strong>3.</strong> 'function addTwo2() {...}': => set a memory space for the function 'addtwo2()' to save its name, codes, ...<br>
+              <strong>4.</strong> 'addTwo(myVar)': => ignore.<br>
+              <strong>5.</strong> 'console.log(myVar)': => ignore.<br>
+              <strong>6.</strong> 'addTwo2(myVar)': => ignore.<br>
+              <strong>7.</strong> 'console.log(myVar)': => ignore.<br>
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>9.</strong> 'let myVar = 5': => assign the value '5' into a memory space for the variable 'myVar'.<br>
+              <strong>10.</strong> 'function addTwo() {...}': => ignore<br> 
+              <strong>11.</strong> 'function addTwo2() {...}': => ignore<br>
+              <strong>12.</strong> 'addTwo(myVar)': => 'addTwo(myVar)' function call or invocation craetes FEC of 'addTwo(myVar)' and pops into ECS.<br>
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive2.png"
+                  caption: Execution Context Stack - A FEC-addTwo(myVar) popped in ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-addTwo(num)</strong><br>
+              <br>
+              <strong>13.</strong> 'num += 2': => set a memory space for the 'num' as 'undefined' in the scope of FEC-addTwo(num).<br>
+              <br>
+              The <strong>Execution Phase of FEC-addTwo(num)</strong><br>
+              <br>
+              <strong>14.</strong> 'num += 2': => assign the value '7' into a memory space for the 'num' in the scope of FEC - addTwo(num).<br>
+              <br>
+              <strong>FEC-addTwo(num) is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of GEC</strong> and continues.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive3.png"
+                  caption: Execution Context Stack - A FEC-addTwo(myVar) popped out from ECS
+                  setname: screens
+          - text: |
+              The <strong>Excution Phase of GEC</strong> continues.<br>
+              <br>
+              <strong>15.</strong> 'console.log(myVar)': => print out the value '5' of the variable 'myVar' in the scope of GEC.<br>
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive31.png"
+                  caption: Execution Context Stack - Excution Phase of GEC in ECS
+                  setname: screens
+          - text: |
+              <strong>16.</strong> 'addTwo2(myVar)': => 'addTwo2(myVar)' function call or invocation craetes FEC of 'addTwo2(myVar)' and pops into ECS.<br>
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive4.png"
+                  caption: Execution Context Stack - A FEC-addTwo2(myVar) popped into ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-addTwo2(myVar)</strong><br>
+              <br>
+              <strong>17.</strong> 'myVar += 2': => set a memory space for the 'myVar' as 'undefined' in the scope of FEC-addTwo2(myVar).<br>
+              <br>
+              The <strong>Execution Phase of FEC-addTwo2(myVar)</strong><br>
+              <br>
+              <strong>18.</strong> 'myVar += 2': => assign the value '7' into a memory space for the 'myVar' in the scope of FEC - addTwo2(myVar).<br>
+              <br>
+              <strong>FEC-addTwo2(myVar) is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of GEC</strong> and continues.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive31.png"
+                  caption: Execution Context Stack - A FEC-addTwo(myVar) popped out from ECS
+                  setname: screens
+          - text: |
+              The rest of GEC operations are pretty much similar with other examples.<br>
+              That's why Primitives are immutable - instead of working on them directly, we're working on a copy, without affecting the original.

@@ -1,0 +1,38 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/currying_partialapplication"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Currying vs Partial Application"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              The currying function is a function that returns another function which takes only one parameter at a time.<br>
+              <br>
+              Partial application is a function returning another function that might return another function, but each returned function can take several parameters.
+    - title: "Description"
+      subsections:
+          - text: |
+              In computer science, currying is a terminology of a technique. It has originated from a mathematical function.<br>
+              Like the example below, the returned function takes an argument instead of one function taking two arguments to add them. It uses the concept of closure. A nested function, which is a returned function, is lexically sitting over its parent function. Even after the execution context of the parent function comes in and goes away, its data still exists on the memory. Whenever, the nested function, returned function, needs its parent fucntion's data, it can access an use them by scope chain and closure with outer environment reference.
+            codes: 
+                - url: "https://gist.github.com/soo1017/deb8be8b87be386976b475308d81e2da.js"
+                  caption: Currying
+          - text: |
+              Unlike currying function, partial application is a function, which is returned, can take several parameters.
+            codes: 
+                - url: "https://gist.github.com/soo1017/8180e56fc10de8ca0ddf2162353361c7.js"
+                  caption: Partial Application
+          - text: |
+              <strong>What is in common</strong>: Both currying and partial application functions are not the same functions as the original. They are newly returned functions and take fewer parameters. Currying is what you do to a function before you actually use that function. In other words, it is what is done while designing or coding your function. Partial application is what is done when you begin to use the function in part by playing some of the parameters the function needs.<br>
+              <br>
+              <strong>What is not in common</strong>: Currying takes only one parameter, unlike partial application which can take more than one.<br>
+              <br>
+              Both of them allow you to take advantage of lazy evaluation. Here’s a simple example.
+            codes: 
+                - url: "https://gist.github.com/soo1017/192ea64e65d9e743f6b7dd9e18b523e3.js"
+                  caption: Currying and Partial Application
+          - text: |
+              So, whenever we click #myDiv, its background color will be set as blue with a different hex. We didn’t even have to put the whole string into the code every time it’s needed.<br>
+              <br>
+              As in the example above, currying or partial application makes lazy evaluation more efficient in places they are needed.

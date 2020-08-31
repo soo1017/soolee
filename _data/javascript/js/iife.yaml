@@ -1,0 +1,76 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/iife"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "IIFE"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              IIFE - (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.<br>
+            
+    - title: "Description"
+      subsections:
+          - text: |
+              Function statement starts with the word 'function' as below. Function statement cannot be anonymous. It needs a name.<br>
+              - function greeting(name) { console.log("Hi " + name)};<br>
+              <br>
+              Function expression comes with the equal '=' operator and anonymous function as below. Note that parenthesis inside Javascript is an operator can be used with expression. Anything inside the parenthesis in JS is an expression.<br>
+              - var greetFunc = <strong>function(name) { console.log("Hi " + name)}</strong>;<br>
+              When the JS engine hits this line, it creates a function object on the fly.<br>
+              <br>
+              It is a design pattern which is also known as a Self-Executing Anonymous Function and contains two major parts:<br>
+              <br>
+              - The first is the anonymous function with lexical scope enclosed within the Grouping Operator (). This prevents accessing variables within the IIFE idiom as well as polluting the global scope.<br>
+              - The second part creates the immediately invoked function expression () through which the JavaScript engine will directly interpret the function.
+          - text: |
+              <br>
+              <strong>***** Data Privacy *****</strong><br>
+              <br>
+              The function becomes a function expression which is immediately executed. The variable within the expression can not be accessed from outside it. The code below explains it.<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/5b9437098d957e569b1f09bcab288d79.js"
+                  caption: IIFE - No Access to Variables
+          - text: |
+              Let us explain how data (variables) inside function is not accessable from global level with the code and execution contexts in the images below.
+            codes:
+                - url: "https://gist.github.com/soo1017/0905d52334aa5734386b301c3b4b6ccd.js"
+                  caption: IIFE
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/iife/iife1.png"
+                  caption: Execution Context Stack - IIFE(No Access to Variables)
+                  setname: screens
+          - text: |
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'function () {...}': => set a memory space for the function '()' to save its name as anonymous, codes, ...<br> 
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>2.</strong> '(function () {...})()': => invoke the function, craetes FEC of '()' and it pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/iife/iife2.png"
+                  caption: Execution Context Stack - IIFE(No Access to Variables)
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-()</strong><br>
+              <br>
+              <strong>3.</strong> 'var greeting = "Hello"': => set a memory space for the variable 'greeting' wihtout assigning 'Hello' in it in the scope of FEC-(). Set as 'undefined'.<br>
+              <strong>4.</strong> 'console.log(...)': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-()</strong><br>
+              <br>
+              <strong>5.</strong> 'var greeting = "Hello"': => assign the value 'Hello' into a memory space for the variable 'greeting' in the scope of FEC-().<br>
+              <strong>6.</strong> 'console.log(...)': => print out the result.<br> 
+              <br>
+              The variable 'greeting' has the scope of FEC of anonymous function, which is not accessable from global level. This is to protect data from outside. If a variable of the same name sits in teh global level, IIFE can prevent any collision of two variables that have the same name.
+          - text: |
+              <br>
+              <strong>***** Stote a Returned Value *****</strong><br>
+              <br>
+              Assigning the IIFE to a variable stores the function's return value, not the function definition itself.<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/3713f9b84996f074edcdf61fc04418cc.js"
+                  caption: IIFE - No Definition of Function
+              

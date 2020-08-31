@@ -1,0 +1,161 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/call_apply_bind"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "call(), apply(), and bind()"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              Functions are a special kind of objects. Would not it be nice to be able to control what the 'this' variable ends up being? when the execution context is created. Javascript has a way to do that. That is where call(), apply(), and bind() come in.<br>
+              A function has a hidden optional 'name' property, which can be anonymous if you don't have a name. It has a 'code' property that contains the code and that 'code' property is invocable so the code runs. All functions in JS also get access to some special functions, some sopecial methods, on their own. A function is just an object so it can have properties and methods. All functions have access to the special methods, 'call()', 'apply()', and 'bind()'.<br>
+              All three of these have to do with the 'this' variable and the arguments that you pass to the function as well.<br>
+              <br>
+              The first image shows function execution contexts containing 'variable' environment, 'this' variable, and 'outer' ebvironment.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/call_apply_bind/call_apply_bind1.png"
+                  caption: Object and 'this'
+                  setname: screens
+          - text: |
+              The second image depicts functions and their access to special methods, 'call()', 'apply()', and 'bind()'.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/call_apply_bind/call_apply_bind2.png"
+                  caption: Functions and Their Special Methods
+                  setname: screens
+    - title: "Description"
+      subsections:
+          - text: |
+              <br>
+              <br>
+              <strong>***** bind() *****</strong><br>
+              <br> 
+              The bind() method returns a new function, when invoked, has its 'this' sets to a specific value. The following illustrates the syntax of the bind() method:<br>
+              <br>
+              fn.bind(thisArg[, arg1[, arg2[, ...]]])<br>
+              <br>
+              In this syntax, the bind() method returns a copy of the function fn with the specific this value (thisArg) and arguments (arg1, arg2, …). Unlike the call() and apply() methods, the bind() method doesn’t immediately execute the function. It just returns the function.<br>
+              <br>
+              The usage of bind() is simple. If you have any fundtion (with 'this') and any object that you want to apply to the function. A function is ok with the 'this' whether it is a default function or a function method of an object.<br>
+              <br>
+              The first case in the code below shows binding the 'person' object to the default function 'changeFname' to create a copy of the function 'changeFname' with a new function name 'newchangeFname'. Then calling the function ''newchangeFname' with an argument 'Tom' prints out an updated name.<br>
+              Note when a copy of a function is created, its argument can be added in the second usage of 'bind' function instead of adding it in its calling. It prints out the same result. Note that the variable 'this' points to the object 'person'.<br>
+              <br>
+              The second case in the code below shows that a function method of an object tries to be bound to another object instead of a default function in the first case. A way to bind a function to an object here is the same as the first case's. The function method 'person.print' is bound to an object 'person1' with the variable 'this' set to 'person1'.
+            codes:
+                - url: "https://gist.github.com/soo1017/90dfe56a9fce72cd5565616f68bf5f47.js"
+                  caption: bind() - an Example 1
+          - text: |
+              Another example to promote your understanding. There are two objects declared using object literal with its property and method respectively. The case can happen that the function method in one object needs the property in the other object or vice versa. The function 'bind()' can come in and make this happen easily. The code below shows it.<br>
+              The object 'runner' is bound to the function method 'fly' of the object 'flyer' with 20 miles speed. The second case is that the object 'flyer' is bound to the function method 'run' of the object 'runner' with 30 miles speed. Two 'bind()' statements copy functions and then are invoked immediately.
+            codes:
+                - url: "https://gist.github.com/soo1017/99ca420efc184a364cc8b46d1a05ac0b.js"
+                  caption: bind() - an Example 2
+          - text: |
+              <br>
+              <br>
+              <strong> function currying *****</strong><br>
+              <br>
+              It is to create a copy of a function but with some preset parameters. Very useful in mathematical situations<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/7a2cfc105b46e21916f3ef4b65a59bf9.js"
+                  caption: bind() - an Example 3 (function currying)
+          - text: |
+              <br>
+              <br>
+              <strong>***** call() *****</strong><br>
+              <br>
+              The call() method calls a function with a given 'this' value and 'arguments'. The first argument of the call() method is an object that the variable 'this' in the called function points to. It allows you to set the this value to any given object. The remaining arguments of the call() method arg1, arg2,… are the arguments of the called function. When you invoke a function, the JavaScript engine invokes the 'call()' method of that function object.<br>
+              The following code shows that 'a function call' is the same as 'function name + access operator '.' + call()', that is, show() = show.call(). 
+            codes:
+                - url: "https://gist.github.com/soo1017/c74e78305716e40d28b15f5e7714b4f6.js"
+                  caption: call() - an Example 1
+          - text: |
+              In this example, instead of calling the add() function directly, the 'call()'' method is used to invoke the add() function. The 'this' value is set to the global object. 
+            codes:
+                - url: "https://gist.github.com/soo1017/565ef714951aef0e0de8f3d2834d4e64.js"
+                  caption: call() - an Example 2
+          - text: |
+              <br>
+              <br>
+              <strong> chain constructors for an object *****</strong><br>
+              <br>
+              The call() method can be used for chaining constructors for an object.<br>
+              <br>
+              In this example:<br>
+              * First, initialize the Box object with two properties: height and width.<br>
+              * Second, invoke the call() method of the Box object inside the Widget object, set the this value to the Widget object.
+            codes:
+                - url: "https://gist.github.com/soo1017/925db472beb37110490cd5e6f5c9df39.js"
+                  caption: call() - an Example 3 (Chaining Constructors)
+          - text: |
+              <br>
+              <br>
+              <strong> function borrowing *****</strong><br>
+              <br>
+              When an object uses a method of another object is called the function borrowing. 'bind()' also has the same feature as explained before. The difference between 'bind()' and 'call()' is that the 'bind()' makes and returns copy of a function, on the other hand, the 'call()' makes and executes a copy of a function with an object pointed to by 'this'.<br>
+              <br>
+              The typical applications of function borrowing are to use the built-in methods of the Array type.<br>
+              For example, the arguments object inside a function is an array-like object, not an array object. To use the slice() method of the Array object, you need to use the call() method:
+            codes:
+                - url: "https://gist.github.com/soo1017/5bbf2d1a023adb1caedd8660c96e90be.js"
+                  caption: call() - an Example 3 (function borrowing)
+          - text: |
+              <br>
+              <br>
+              <strong>***** apply() *****</strong><br>
+              <br>
+              The Function.prototype.apply() method allows you to call a function with a given this value and arguments provided as an array. Here is the syntax of the apply() method:<br>
+              <br>
+              fn.apply(thisArg, [args])<br>
+              <br>
+              The apply() method accepts two arguments:<br>
+              * The thisArg is the value of this provided for the call to the function fn.<br>
+              * The args argument is an array that specifies the arguments of the function fn. Since the ES5, the args argument can be an array-like object or array object.<br>
+              <br>
+              THe apply() method is similar to the call() method except that it takes the arguments of the function as an array instead of the individual arguments.<br>
+              Let’s take some examples of using the apply() method.
+            codes:
+                - url: "https://gist.github.com/soo1017/e2e8fc937db1506c6bb360b86fef41e8.js"
+                  caption: apply() - an Example 1
+          - text: |
+              In this example, we set the this value inside the function to the person object. The arguments of the greet() function was passed into the apply() method as an array.
+              The apply() method invoked the greet() function with the this value set to the person object and arguments as an array ['Hello', 'How are you?'].
+              If you use the call() method, you need to pass the arguments of the greet() function separately as follows:<br>
+              <br>
+              let result = greet.call(person, Hello', 'How are you?');
+            codes:
+                - url: "https://gist.github.com/soo1017/c74e78305716e40d28b15f5e7714b4f6.js"
+                  caption: apply() - an Example 2
+          - text: |
+              <br>
+              <br>
+              <strong> function borrowing *****</strong><br>
+              <br>
+              The apply() method allows an object to borrow the method of another object without duplicating the code.<br>
+              The server object doesn’t have the turnOn() and turnOff() methods. To execute the turnOn() method of the computer object on the server object, you can use the apply() method as in the code below:
+            codes:
+                - url: "https://gist.github.com/soo1017/380263cad6526864ff77f019b1e505f8.js"
+                  caption: apply() - an Example 3 (function borrowing)
+          - text: |
+              <br>
+              <br>
+              <strong> append an array to another *****</strong><br>
+              <br>
+              The apply() method allows you to append elements of an array to another:<br>
+              In this example, the apply() method modifies the original array arr. Note that the Array.prototype.concat() method also provides the same result except that it returns the new array instead of modifying the original array.
+            codes:
+                - url: "https://gist.github.com/soo1017/34fec2b5499fbc887bb1d910cf7e6e38.js"
+                  caption: apply() - an Example 4 (array appending)
+          - text: |
+              <br>
+              <br>
+              <strong>***** Summary *****</strong><br>
+              <br>
+              'bind()', 'call()', and 'apply()' is used to borrow a function. An object does not have a function that it wants to use. One option is to create its own, but instead, it can borrow a function that is not its own. A borrowed function can be a default or a function method of a diffrent object.<br>
+              <br>
+              * 'bind()' is to make and return a copy of a function with 'this' set to an object to borrow the function. It is not executed. Just return a copy of it. Note that arguments of the borrowed function can be passed into the parameters of 'bind()' after 'this' or an object.<br>
+              <br>
+              * 'call()' is to make and execute a copy of a fucntion with 'this' set to an object to borrow the function. Note that arguments of the borrowed function can be passed into the parameters of 'call()' after 'this' or an object individually.<br>
+              <br>
+              * 'apply()' is to make and execute a copy of a fucntion with 'this' set to an object to borrow the function. Note that arguments of the borrowed function can be passed into the parameters of 'apply()' after 'this' or an object in the form of array.<br>
+

@@ -1,0 +1,82 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/pure_function"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Pure Function"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              The definition of a pure function is:<br>
+              <br>
+              The function always returns the same result if the same arguments are passed in. It does not depend on any state, or data, change during a program’s execution. It must only depend on its input arguments.<br>
+              <br>
+              The function does not produce any observable side effects such as network requests, input and output devices, or data mutation.
+    - title: "Description"
+      subsections:
+          - text: |
+              Why pure functions?<br>
+              <br>
+              - Reusable.<br>
+              - Composable.<br>
+              - Easy to test.<br>
+              - Cacheable.<br>
+              - Parallelizable.<br>
+              <br>
+              A pure function doesn’t depend on and doesn’t modify the states of variables out of its scope.<br>
+              Concretely, that means a pure function always returns the same result given same parameters. Its execution doesn’t depend on the state of the system.<br>
+              Pure functions are a pillar of functional programming.
+            codes: 
+                - url: "https://gist.github.com/soo1017/626739694ad9f01df6f3a5128a483573.js"
+                  caption: Not Pure Function 1
+          - text: |
+              The code above is impure function. It modifies attribute of a given object. The original value of 'a' attribute of the object 'values' is 3, but after function is executed, it becomes '3' as in the code. So it is against a requirement of pure function, which is 'It does not depend on any state, or data, change during a program’s execution'.
+            codes: 
+                - url: "https://gist.github.com/soo1017/bab0cbd4c4ffd3486bf3cd93def5a9a3.js"
+                  caption: Pure Function 1
+          - text: |
+              Now we simply modify the parameter which is in the scope of the function, nothing is modified outside!
+            codes: 
+                - url: "https://gist.github.com/soo1017/f87f8368488946c618f4a62d563a44fa.js"
+                  caption: Not Pure Function 2
+          - text: |
+              Here, b is not in the scope of the function. The result will depend on the variable 'b'. So it is not pure.
+            codes: 
+                - url: "https://gist.github.com/soo1017/61e212d47dc9446c9b0a4f5743de8211.js"
+                  caption: Pure Function 2
+          - text: |
+              Side effects include, but are not limited to:<br>
+              <br>
+              - changing the file system<br>
+              - inserting a record into a database<br>
+              - making an http call<br>
+              - mutations<br>
+              - printing to the screen / logging<br>
+              - obtaining user input<br>
+              - querying the DOM<br>
+              - accessing system state<br>
+              <br>
+              <br>
+              <strong>Why should our functions be pure? *****</strong><br>
+              <br>
+              <strong>Readability</strong> -> Side effects make our code harder to read. Since a non pure function is not deterministic it may return several different values for a given input. We end up writing code that needs to account for the different possibilities. Let’s look at another http based example:
+            codes: 
+                - url: "https://gist.github.com/soo1017/1d9b58d426d2107105d2cba6d8dc6e20.js"
+                  caption: Not Pure Function 3
+          - text: |
+              This snippet can fail in so many different ways. What if the id passed to the getTokenFromServer was invalid? What if the server crashed and returned an error, instead of the expected token? There are a lot of contingencies that need to be planned for, and forgetting one (or several!) of them is very easy.<br>
+              <br>
+              Additionally, a pure function is easier to read, as it requires no context. It receives all of its needed parameters up front, and does not talk / tamper with the state of the application.<br>
+              <br>
+              <strong>Testability</strong> -> Because pure functions are deterministic by nature, writing unit tests for them is a lot simpler. Either your function works or it doesn’t.<br>
+              <br>
+              <strong>Parallel Code</strong> -> Since pure functions only depend on their input, and will not cause side effects, they are great for scenarios where parallel threads run and use shared memory.<br>
+              <br>
+              <strong>Modularity and Reusability</strong> -> Think of pure functions as little units of logic. Because they only depend on the input you feed them, you can easily reuse functions between different parts of your codebase or different projects altogether.<br>
+              <br>
+              <strong>Referential Transparency</strong> ->  Simply put, referential transparency means that a function call could be replaced by its output value, without changing the overall behavior of our program.<br>
+              <br>
+              It’s important to note that although pure functions offer a ton of benefits, it’s not realistic to only have pure functions in our applications. After all, if we did our application would have no side effects, thus not produce any observable effects to the outside world. That would be pretty boring. Instead we will try to encapsulate all of our side effects to specific parts of our codebase. That way, assuming we have written unit tests for our pure functions and know they are working, if something breaks in our app, it will be a lot easier to track down.
+            codes: 
+                - url: "https://gist.github.com/soo1017/1d9b58d426d2107105d2cba6d8dc6e20.js"
+                  caption: Not Pure Function 3

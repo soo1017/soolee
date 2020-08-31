@@ -1,0 +1,89 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/functional_prog_example1"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Functional Programming Examples with HTML and CSS"
+details:
+    - title: "An Example 1"
+      subsections:
+          - text: |
+              The codes below are a HTML code and its css. The first HTML is a HTML that you can see easily around you. The second one is a HTML of table, which will be created using a JS code with functional programming principle. After the second HTML is created, it will be appended to a division with id="app" as a child.
+            codes: 
+                - url: "https://gist.github.com/soo1017/1816fe75d9dabb4eee20c54b35b71262.js"
+                  caption: A HTML
+          - text: |
+
+            codes: 
+                - url: "https://gist.github.com/soo1017/df0bf9549d0fd4d34be7684ebc85cf9c.js"
+                  caption: A HTML to Create
+          - text: |
+              First, we start with creating an arry of objects having the data of the table in the code. With the array, we use an approach to make a pure function creating a cell of the table.
+            codes: 
+                - url: "https://gist.github.com/soo1017/ad4ebdfb9a0fd598759b2213cdb9d190.js"
+                  caption: JS Code to Create Table Cell and Row
+          - text: |
+              An array 'MEALS' is created to contain the data in the table in the form of an array of an object that has the names of 'description' and 'calories'. The data in the array is declared as constant and will not be mutated to keep the princicple of immutable data.<br>
+              The expression 'const {...} = tags' comes from hyperscript or hyperscript helper to create HTML tags, attributes, and values using JS. Next two functions are developed to get data and create table cells and rows with data in the form of HTML. The first function 'cell' is focused to create a cell of a table. On the other hand, the second function 'mealRow' is focused to create a row of a table using the fucntion of 'cell'. They are pure functions because they only depend on input arguments.<br>
+              The rest in the code is very straight forward. The generated HTML tags, which are 'td' and 'tr', will be appended into the division of 'id="app"'. The next step is to generate 'tbody' part using the existing functions.
+            codes: 
+                - url: "https://gist.github.com/soo1017/b256eef068abbad2cfa570beeda1e665.js"
+                  caption: JS Code to Create Table Body
+          - text: |
+              Another function 'mealBody' is added to create HTML tag 'tbody', which contains the all data of the table. In this function, the 'map' function of an array is implemented inside it to go thru all items of the constant array 'MEALS'. The 'map' function takes a function as an argument, which will be the 'mealRow' fucntion to create each row of the table.<br>
+              The 'mealRow' function has two input parameters, 'className' and 'value'. Using the closure, the function 'mealRow' is called by assigning one parameter with its specific value. It can be accomplished with Ramda's partial function. The 'partial' and 'mealRow' function will be called as many as the number of items in the array, which is the second parameter. The data in the invoked function 'mealRow' will remain in its memory and be used for the invocation of another function over which the function 'mealRow' physically sits using scope chain and closure.<br>
+              The picture below depicts the output of the function 'mealBody'. It shows all data of the constant 'MEALS' in the form of table successfully.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example1.png"
+                  caption: Output of the Function 'mealBody'
+                  setname: screens
+          - text: |
+
+            codes: 
+                - url: "https://gist.github.com/soo1017/d0c771fe040a409fbf140de9ae7e58ee.js"
+                  caption: JS Code to Create Table Body
+          - text: |
+              Now it is time to create the row of total that compute the sum of calories in the data. The function 'totalRow' is to compute the total of calories using the array 'reduce' function that takes an array as its argument and compute the sum of items of the array with 'add' function.<br>
+              The statement is 'R.reduce(R.add, 0, R.map(value => value.calories, value))'. The 'map' function returns the array of values of calories in the 'MEALS' constant array. The 'add' function is to add two items from the array at a time. The 'reduce' function is to continue adding items of the array until the last item with the initial value, 0. The 'reduce' function returns the final sum of addition of items in the array of calories.<br>
+              After computing the total of calories and creating the row of displaying the total of calories, the row is appended to the meal part using 'const rows1 = R.append(totalRow('bt b', meals), rows)', and then the body part of the table is created by 'return tbody({className}, rows1)'. The output of the code is depicted below with the total computed and displayed.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example2.png"
+                  caption: Output of the Function 'mealBody' - Updated
+                  setname: screens
+          - text: |
+
+            codes: 
+                - url: "https://gist.github.com/soo1017/7dd8efd492ca3328a3a89d35275e23da.js"
+                  caption: JS Code to Create Table Body and Header
+          - text: |
+              The last two functions in the code above create the head part of the table. They are very straight forward without further explanation.
+            codes: 
+                - url: "https://gist.github.com/soo1017/44d143deb0765574c1a46bcb0a4a1dae.js"
+                  caption: JS Code to Create Whole Table
+          - text: |
+              The 'tableBody' function is to combine the body and header part of the table in order to complete the table. The image below is to show the output of the code. This is how functional programming works with HTML and CSS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example3.png"
+                  caption: Output of Code
+                  setname: screens
+    - title: "An Example 2"
+      subsections:
+          - text: |
+              The code below will have the same output as the example above. But it has a diffrent style of coding using a lot of Ramda's functions. The 'curry' and 'compose' functions are heavily implemented. The 'curry' function takes a function and returns a curried equivalent of the provided function. The curried function can take its arguments partially multiple time up to its last argument. For instance, when a curried function has 3 arguments like f(a, b, c),  the function can take its first argument first, 'a', and then take last two, 'b' and 'c', to complete the execution of the function.<br>
+              Ramda's curry function is assigned to constant variables in the code. The variables are invoked with any number of their parameters until their all parameters.<br>
+              Another critical function here is 'compose' function. It is same as the 'pipe' function in the Ramda. The difference between them is the order of functions execution. The 'compose' function is right-to-left in functions execution, on the other hand, the 'pipe' function is left-to-right in functions execution. The first function inside executes with its argument and then outputs results. The results will be used as the argument of the second function. The flow of functions execution inside both 'pipe' and 'compose' function behaves as explained early until the last function inside.
+            codes: 
+                - url: "https://gist.github.com/soo1017/fb208aa05781ef75b5989ae38d9a6ba1.js"
+                  caption: A JS Code to Create HTML
+          - text: |
+              Let us check the code with details.<br>
+              <br>
+              <strong>- const mealHeader</strong>: The 'mealHeader' variable gets a result of 'compose' function that starts with the 'map' function with an array as its argument. The callback function of 'map' function is a 'th' function that creates a 'th' tag in HTML. Because the 'map' function takes an array as its argument, the 'th' function will executes as many as the number of items in the array. A Ramda's 'partial' function is used with 'th' function in order to assign one partial parameter of the 'th' function, that is, '[{ className: 'pa2 tl' }]'. And then a 'tr' function and a 'thead' function will be executed sequentially.<br>
+              <br>
+              <strong>- const mealRow</strong>: The 'mealRow' variable gets a result of 'curry' and 'compose' functions that create one row of the table computing the calories of a meal. A 'map' function runs first using the input array 'fields', which will be '['description', 'calories']'. Its output will be the value of names in the input array in the form of an array. Another 'map' function waits to create two 'td' tags with the values. After two 'td' tags are created with their class set as 'pa2' using Ramda's partial function, they are combined to a 'tr' tag with its class set as 'stripe-dark'. The 'tr' tag does not need a Ramda's 'partial' function because it does not have its content. It is the flow to generate one row of the table.<br>
+              <br>
+              <strong>- const totalRow</strong>: The 'totalRow' variable gets a result of 'curry' and 'compose' functions that create a row of total of calories. Note that the 'compose' function has its parameter, 'row'. A first 'map' function in 'compose' function takes the data in the 'MEALS' constant array and sort out the value of 'calories' in the form of array. The array is an input to the second function, 'reduce' function. It computes adding of items in the array and outputs one number, which will be a total of calories. The total of calories is appended into an array with a word 'Total:'. This array has two items. With two items, two 'td' tags are generated with class set as 'pa2'. These two 'td' tags are appended to onw 'tr' tag. They are going to be one row of the total of calories.<br>
+              <br>
+              <strong>- const mealsBody</strong>: The 'mealBody' variable gets a result of 'curry' and 'compose' functions that create a body part of the table to combine meal data and its total. The first 'map' function in the 'compose' function deals with all rows of meals. With the data in the 'MEALS', it generates three rows of meals woth their calories. The next function, 'R.append', attaches a row of total calories to three rows of meals. It will be a body part of the table. Here, the 'compose' function is applied with one of the parameters of the function.<br>
+              <br>
+              <strong>- const mealsTable</strong>: The 'mealsTable' variable is assigned with a curried funtion. It simply combines the body and header part of the table. The 'partial' function is used to assign a value into the class attribute of the table.<br>
+          

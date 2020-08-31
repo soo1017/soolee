@@ -12,7 +12,7 @@ body {
     color: $primary-color;
     font-size: 1.25rem;
     background-color: $bg-color;
-    background-image: url(https://soo1017.github.io/soolee/assets/img/bg_tile.png);
+    background-image: url(http://localhost:4000/assets/img/bg_tile.png);
     background-repeat: repeat;
 }
 
@@ -178,6 +178,10 @@ a:hover {
     border: 2px solid $link-color;
     border-radius: 5px;
     color: $link-color;
+}
+
+.sub-space {
+    padding-left: 2rem;
 }
 
 // Large devices (desktops, less than 1200px)

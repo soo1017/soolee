@@ -1,7 +1,7 @@
 title: "Food Truck 3"
 subtitle: "Food Truck - ASP.NET MVC"
-thumbnail: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck3/thumbnail.png"
-banner: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck3/header.png"
+thumbnail: "http://localhost:4000/assets/img/projects/foodtruck3/thumbnail.png"
+banner: "http://localhost:4000/assets/img/projects/foodtruck3/header.png"
 overview: |
     A responsive and dynamic web application to implement the online-order of food truck designed by ASP.NET.
 roles: "Sole developer and designer"
@@ -28,6 +28,6 @@ details:
               - All data (the total number of online order, the number of each menu order, the amount of money by online-order, ...) related to online order is automatically collected and stored into DB with MongoDB. The data can be seen and managed anytime in the admin webpages with an admin authority.<br>
               - Customers can see the updated quantity of menu when making an online order. When a menu runs out, the menu will have the sign "out of the stock".
             images:
-                - url: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck3/main_screen1.gif"
+                - url: "http://localhost:4000/assets/img/projects/foodtruck3/main_screen1.gif"
                   caption: Screen Shot 1
                   setname: screens

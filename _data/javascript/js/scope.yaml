@@ -1,0 +1,119 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/scope"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Scope & 'let'"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              Scope determines the accessibility (visibility) of variables and is where a variable is available in your code.<br>
+              <br>
+              Variables declared with the let keyword can have Block Scope.
+    - title: "Description"
+      subsections:
+          - text: |
+              In JavaScript there are two types of scope:<br>
+              ** Local scope<br>
+              ** Global scope<br>
+              JavaScript has function scope: Each function creates a new scope.<br>
+              Variables defined inside a function are not accessible (visible) from outside the function. The example is below.<br>
+              <br>
+              Variables declared within a JavaScript function, become LOCAL to the function.<br>
+              Local variables have Function scope: They can only be accessed from within the function.
+            codes: 
+                - url: "https://gist.github.com/soo1017/be266e37f61ebe76fcb3b967e6afa0fa.js"
+                  caption: Function Scope
+          - text: |
+              Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.<br>
+              Local variables are created when a function starts, and deleted when the function is completed.<br>
+              <br><br>
+              A variable declared outside a function, becomes GLOBAL.<br>
+              A global variable has global scope: All scripts and functions on a web page can access it. 
+            codes:
+                - url: "https://gist.github.com/soo1017/8a68d7254ac138b72aac594cda6ae0f2.js"
+                  caption: Global Scope
+          - text: |
+              <strong>In JavaScript, objects and functions are also variables.</strong><br>
+              <br>
+              If you assign a value to a variable that has not been declared, it will automatically become a <strong>global</strong> variable.<br>
+              This code example will declare a global variable carName, even if the value is assigned inside a function.<br>
+              <br>
+              <strong>In "Strict Mode", undeclared variables are not automatically global.</strong>
+            codes:
+                - url: "https://gist.github.com/soo1017/3027d07df1be09da8396a25516a02005.js"
+                  caption: Automatically Global
+          - text: |
+              <strong>Do not create global variables unless you intend to. Your global variables (or functions) can overwrite window variables (or functions). Any function, including the window object, can overwrite your global variables and functions.</strong><br>
+              <br>
+              The lifetime of a JavaScript variable starts when it is declared. Local variables are deleted when the function is completed. In a web browser, global variables are deleted when you close the browser window (or tab).<br>
+              <br>
+              <strong>Function arguments (parameters) work as local variables inside functions.</strong>
+          - text: |
+              <br><br>
+              <strong>***** 'let' based on Block *****</strong><br>
+              <br>
+              Variables declared with the keyword 'var' cannot have block scope.<br>
+              Variables declared inside a block {} can be accessed from outside the block. I mean block, not function block.
+            codes:
+                - url: "https://gist.github.com/soo1017/2ae963129f7dfc58d0829dc77855e341.js"
+                  caption: Out of Block with 'var'
+          - text: |
+              Before ES6 JavaScript did not have Block Scope. Variables declared with the 'let' keyword can have Block Scope. Variables declared inside a block {} cannot be accessed from outside the block:
+            codes:
+                - url: "https://gist.github.com/soo1017/d57cd44c779555596572d263032c5dd3.js"
+                  caption: Out of Block with 'let'
+          - text: |
+              <br><br>
+              <strong>***** 'let' based on Loop Scope *****</strong><br>
+              <br>
+              Using 'var' in a loop. it carries the value inside loop into out of loop.<br>
+              Using 'let' in a loop. it cannot carry the value inside loop into out of loop. When 'let' is used to declare the 'i' variable in a loop, the 'i' variable will only be visible within the loop.
+            codes:
+                - url: "https://gist.github.com/soo1017/36997d3a5d6e997b94071da601ffdc59.js"
+                  caption: Out of Loop with 'var'
+                - url: "https://gist.github.com/soo1017/caf61ac1e731983150d84a5020dc7426.js"
+                  caption: Out of Loop with 'let'
+          - text: |
+              <br><br>
+              <strong>***** 'let' based on Function Scope & Global Scope *****</strong><br>
+              <br>
+              Variables declared with 'var' and 'let' are quite similar when declared inside a function. They will both have 'function scope'.<br>
+              <br>
+              Variables declared with 'var' and 'let' are quite similar when declared outside a block. They will both have 'global scope'.<br>
+          - text: |
+              <br><br>
+              <strong>***** 'let' and 'var' based on Redeclaring *****</strong><br>
+              <br>
+              Redeclaring a JavaScript variable with 'var' is allowed anywhere in a program.
+            codes:
+                - url: "https://gist.github.com/soo1017/d35eb30f72a7ba70c37e93e1f90513eb.js"
+                  caption: Redeclaring with 'var' from 'var'
+          - text: |
+              Redeclaring a 'var' variable with 'let', in the same scope, or in the same block, is not allowed.
+            codes:
+                - url: "https://gist.github.com/soo1017/96785941ecb337c4ae2c9038529478ce.js"
+                  caption: Redeclaring with 'let' from 'var'
+          - text: |
+              Redeclaring a 'let' variable with 'let', in the same scope, or in the same block, is not allowed.
+            codes:
+                - url: "https://gist.github.com/soo1017/9bf7fff0e0df2939d52f77c0fab2dbc1.js"
+                  caption: Redeclaring with 'let' from 'let'
+          - text: |
+              Redeclaring a 'let' variable with 'var', in the same scope, or in the same block, is not allowed.
+            codes:
+                - url: "https://gist.github.com/soo1017/a9aeb3830c6221c34db41cf5ce7c45f0.js"
+                  caption: Redeclaring with 'var' from 'let'
+          - text: |
+              Redeclaring a variable with 'let', in another scope, or in another block, is allowed.
+            codes:
+                - url: "https://gist.github.com/soo1017/e9962cc8d2010e6eb638573c02db4fcb.js"
+                  caption: Redeclaring with 'let' in another scope
+          - text: |
+              <br><br>
+              <strong>***** 'let' and 'var' based on Hoisting *****</strong><br>
+              <br>
+              Variables defined with 'var' are hoisted to the top.<br>
+              <br>
+              Variables defined with 'let' are not hoisted to the top.
+              

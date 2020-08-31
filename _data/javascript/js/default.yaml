@@ -1,0 +1,27 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/default"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Default Value"
+details:
+    - title: "Definition & Description"
+      subsections:
+          - text: |
+              There is a default that can be used to avoid some undesirable situations by accident. In this section, try to show a method to avoid the wrong cases.<br>
+              <br>
+              The following code explains that an undesirable value is passed as function's parameter and printed out accidently.
+            codes: 
+                - url: "https://gist.github.com/soo1017/06b9442635074017358a7fa0cd2d4a33.js"
+                  caption: Default Value - Undesirable Case
+          - text: |
+              To avoid this case, a default value can be used with 'logical OR' operation. This statement can do a lot to eliminate the undesirables cases and has already been employed thru many JS frameworks or libraries.
+            codes: 
+                - url: "https://gist.github.com/soo1017/e79c75510b1e8fe7938b429929662407.js"
+                  caption: Default Value - Desirable Case
+          - text: |
+              When 'logic OR' operator has two strings as its parameter, it will return the first parameter. The example shows it.<br>
+              <br>
+              name = 'Soo' || 'your default value'<br>
+              <br>
+              <br>
+              > name = 'Soo'<br>

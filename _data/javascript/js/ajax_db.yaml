@@ -1,0 +1,41 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/ajax_db"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "AJAX and DB"
+details:
+    - title: "Description (from w3school.com)"
+      subsections:
+          - text: |
+              AJAX can be used for interactive communication with a database.<br>
+              <br>
+              <strong>***** AJAX Database Example *****</strong><br>
+              <br>
+              The following example will demonstrate how a web page can fetch information from a database with AJAX:
+            codes: 
+                - url: "https://gist.github.com/soo1017/0f022496b3f4ef8687b6af9a4b0a8abf.js"
+                  caption: AJAX interacts with DB
+          - text: |
+              The showCustomer() function does the following:<br>
+              <br>
+              * Check if a customer is selected<br>
+              * Create an XMLHttpRequest object<br>
+              * Create the function to be executed when the server response is ready<br>
+              * Send the request off to a file on the server<br>
+              * Notice that a parameter (q) is added to the URL (with the content of the dropdown list)<br>
+              <br>
+              <br>
+              The page on the server called by the JavaScript above is a PHP file called "getcustomer.php".<br>
+              The source code in "getcustomer.php" runs a query against a database, and returns the result in an HTML table:
+            codes: 
+                - url: "https://gist.github.com/soo1017/ea41ada4e506d8ece0cd88404fbf825d.js"
+                  caption: AJAX interacts with DB 
+
+            
+
+                  
+              
+
+
+            
+          

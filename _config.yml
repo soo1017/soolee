@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ilsoo(Soo) Lee Portfolio
+title: Ilsoo Lee Portfolio
 email: lee_ilsoo0@yahoo.com
 phone: +1 (510) 396-4657
 description: A portfolio to showcase the professional web & mobile application projects worked on by Soo Lee.
 # url: "https://github.com/soo1017/soolee" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://soo1017.github.io/soolee" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin: "https://www.linkedin.com/in/il-soo-lee-20866323"
 github: soo1017
 

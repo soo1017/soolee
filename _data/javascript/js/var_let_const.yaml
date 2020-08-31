@@ -1,0 +1,44 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/var_let_const"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "'var', 'let', and 'const'"
+details:
+    - title: "Description (from medium.com)"
+      subsections:
+          - text: |
+              <br>
+              <strong>***** var *****</strong><br>
+              <br>
+              The 'var' statement declares a variable. Variables are containers for storing any information.<br>
+              <br>
+              <strong>Scope</strong>: The scope of a variable declared with var is its current execution context, which is either the enclosing function or, for variables declared outside any function, global. It can be updated or re-declared.
+            codes:
+                - url: "https://gist.github.com/soo1017/752ebacf1a9455fbebf9909ca796c6f9.js"
+                  caption: var
+          - text: |
+              <strong>Hoisting</strong>: Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. the only thing that gets moved to the top is the variable declarations , not the actual value given to the variable because the creation phase of execution context makes it look like happening as hoisting.<br>
+              <br>
+              <br>
+              <strong>***** let *****</strong><br>
+              <br>
+              The 'let' allows to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.<br>
+              <br>
+              <strong>Scope</strong>: 'let' is block scoped. It can be updated but not re-declared in the same scope.<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/ba29cd6c2d41704bd121dbbbd8e9036b.js"
+                  caption: let
+          - text: |
+              <strong>Hoisting</strong>: Just like 'var', let declarations are hoisted to the top. Unlike 'var' which is initialized as 'undefined', the 'let' keyword is not initialized. So if you try to use a let variable before declaration, you'll get a Reference Error.
+              <br>
+              <br>
+              <strong>***** const *****</strong><br>
+              <br>
+              The 'const' keyword does not allow a variable name to be reused anywhere within your code.<br>
+              <br>
+              <strong>Scope</strong>: 'const' declarations are block scoped. It cannot be updated or re-declared. It must be initialized at the time of declaration.<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/434ad2d27253a4dc92d10417d000bab3.js"
+                  caption: const
+          - text: |
+              <strong>Hoisting</strong>: Like let, const declarations are hoisted to the top but are not initialized. Here, const keyword is declared at the top within the scope but not initialized with Undefined.

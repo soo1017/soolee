@@ -1,0 +1,294 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/closure"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Closures"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              A closure in JavaScript is like keeping a copy of all the local variables, just as they were when a function exited.<br>
+    - title: "Description"
+      subsections:
+          - text: |
+              Let us explain closures with codes and their execution contexts.
+              Here is the first case with two codes below.
+            codes:
+                - url: "https://gist.github.com/soo1017/c227465175bc04e51ab8b7b2fec151fd.js"
+                  caption: Not Closure
+                - url: "https://gist.github.com/soo1017/59254b8b1e80003a550a65d04e6b23a8.js"
+                  caption: Closure
+          - text: |
+              Let us trace the first code (not closure) with its execution context.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/notclosure1.png"
+                  caption: Execution Context Stack - Not Closure 1
+                  setname: screens
+          - text: |
+              The following description starts with the above picture.<br>
+              <br>
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'let arry =[]': => set a memory space for the array variable 'arry'. Set as 'undefined'.<br> 
+              <strong>2.</strong> 'for {...}': => ignore.<br>
+              <strong>3.</strong> 'arry.forEach(...)': => ignore.<br>
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>4.</strong> 'let arry =[]': => assign an empty array into the variable 'arry'.<br> 
+              <strong>5.</strong> 'for {...}': => execute for loop. push the function '_ => console.log(c)' into the array 'arry' one by one. variable 'i' is equal to 4 and variable 'c' is equal to 8 finally in the global.<br>
+              <strong>3.</strong> 'arry.forEach(...)': => calling the function '_ => console.log(c)' creates and brings up FEC-_ => console.log(c) and then execute 'console.log(c)' with c = 8. Then FEC-_ => console.log(c) disappears. It repeats the action of calling the function 5 times.<br>
+              <br>
+              The image below depicts that when FEC of '_ => console.log(c)' gets the value of 'c' from the global level using scope chain. Therefore, the code will print out '8' 5 times.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/notclosure2.png"
+                  caption: Execution Context Stack - Not Closure 2
+                  setname: screens
+          - text: |
+              <br>
+              <br>
+              Let us trace the second code (closure) with its execution context.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure0.png"
+                  caption: Execution Context Stack - Closure 1
+                  setname: screens
+          - text: |
+              The following description starts with the above picture.<br>
+              <br>
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'let arry =[]': => set a memory space for the array variable 'arry'. Set as 'undefined'.<br> 
+              <strong>2.</strong> 'for {...}': => ignore.<br>
+              <strong>3.</strong> 'arry.forEach(...)': => ignore.<br>
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>4.</strong> 'let arry =[]': => assign an empty array into the variable 'arry'.<br> 
+              <strong>5.</strong> 'for {...}': => execute for loop.<br>
+              calling iife '(_ => {...}' creates and brings up FEC of iife. The JS engine creates FEC-iife.<br>
+              <br>
+              The <strong>Creattion Phase of FEC-iife</strong><br>
+              <br>
+              <strong>6.</strong> 'var c = i * 2': => set a memory space for the variable 'c'. Set as 'undefined'.<br> 
+              <strong>7.</strong> 'arry.push': => ignore.<br> 
+              <br>
+              The <strong>Execution Phase of FEC-iife</strong><br>
+              <br>
+              <strong>8.</strong> 'var c = i * 2': => assign the value '0', when i = 0, into the variable 'c'.<br> 
+              <strong>9.</strong> 'arry.push(...)': => push the function '_ => console.log(c)' into the arry[0] with c = 0 because it is immediately invoked function. So '_ => console.log(0)' is actually stored in the array 'arry[0]'.<br>
+              Execution Phase of FEC-iife disappears with i = 0.<br>
+              <br>
+              The JS engine repeats steps of from 6 to 9 five times. The images below can explains it clearly
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure1.png"
+                  caption: Execution Context Stack - Closure 2
+                  setname: screens
+          - text: |
+              
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure2.png"
+                  caption: Execution Context Stack - Closure 3
+                  setname: screens
+          - text: |
+              
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure3.png"
+                  caption: Execution Context Stack - Closure 4
+                  setname: screens
+          - text: |
+              
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure4.png"
+                  caption: Execution Context Stack - Closure 5
+                  setname: screens
+          - text: |
+              
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure5.png"
+                  caption: Execution Context Stack - Closure 6
+                  setname: screens
+          - text: |
+              After finishing for loop execution, ECS will be like in the image below. FEC-iife goes in and off ECS 5 times, but leaves their variables and values in their memory. Now back to the execution phase of GEC.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure6.png"
+                  caption: Execution Context Stack - Closure 7
+                  setname: screens
+          - text: |
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>...</strong> 'arry.forEach(...)': => execute the function stored in the array 'arry' from its first item. It invokes the function. The JS engine creates and brings up FEC of '_ => console.log(c)'. FEC moves into its creation phase.<br> 
+              <br>
+              The <strong>Creattion Phase of FEC-(_ => console.log(c))</strong><br>
+              <br>
+              <strong>6.</strong> 'console.log(c)': => ignore.<br> 
+              <br>
+              The <strong>Execution Phase of FEC-(_ => console.log(c))</strong><br>
+              <br>
+              <strong>8.</strong> 'console.log(c)': => execute the expression with c = 0. The value of 'c' comes from the varible 'c' left after FEC-iife(i=0) disappears. It is closure.<br>
+              <br>
+              The JS engine repeats steps of Creation and Execution phases of FEC-(_ => console.log(c)) five timee from arry[0] ... arry[4]. Two images below shows it. It prints out '0, 2, 4, 6, 8' sequentially. Then back to GEC and end the code.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure7.png"
+                  caption: Execution Context Stack - Closure 8
+                  setname: screens
+          - text: |
+
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure8.png"
+                  caption: Execution Context Stack - Closure 9
+                  setname: screens
+          - text: |
+              <br>
+              <br>
+              Here is the second case(closure) with the code below.
+            codes:
+                - url: "https://gist.github.com/soo1017/f63d9ddfd8100e3655fd9bceb5ee1502.js"
+                  caption: Closure
+          - text: |
+              In the creation phase of GEC - image below,<br>
+              <br>
+              * save memory for the function 'greet(...)'<br>
+              * save memory for the variable 'newGreet' and set as 'undefined'<br>
+              * ignore 'newGreet('Sam')'<br>
+              <br>
+              In the execution phase of GEC,<br>
+              <br>
+              * ignore 'greet(...)'<br>
+              * execute 'greet('Hi')' and call the function 'greet('Hi')'. Move into the creation phase of FEC - greet('Hi').
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure21.png"
+                  caption: Execution Context Stack - Closure 10
+                  setname: screens
+          - text: |
+              In the creation phase of FEC - greet('Hi') - image below,<br>
+              <br>
+              * set memory for the argument 'c'<br>
+              * ignore 'return f(...)'
+              <br>
+              In the execution phase of FEC - greet('Hi'),<br>
+              <br>
+              * set the argument 'c' as 'Hi'<br>
+              * execute 'return f(...)' by returning the function and back to the execution phase of GEC.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure22.png"
+                  caption: Execution Context Stack - Closure 11
+                  setname: screens
+          - text: |
+              In the execution phase of GEC,<br>
+              <br>
+              * assign the returned function into the variable 'newGreet'<br>
+              * execute 'newGreet('Sam')' and call the function 'newGreet('Sam')'. Move into the creation phase of FEC - newGreet('Sam').
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure23.png"
+                  caption: Execution Context Stack - Closure 12
+                  setname: screens
+          - text: |
+              In the creation phase of FEC - newGreet('Sam'),<br>
+              <br>
+              * set memory for the argument 'name'<br>
+              * ignore 'console.log(...)'<br>
+              <br>
+              In the execution phase of FEC - newGreet('Sam'),<br>
+              <br>
+              * set the argument 'name' as 'Sam'<br>
+              * execute 'console.log(...)' with using the value of 'c' stored in its memort using scope chain, which is left after FEC - greet() disappears as in the image below. Move into the execution phase of GEC.<br>
+              <br>
+              The JS engine prints out 'Hi Sam'. It is called closure.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure23.png"
+                  caption: Execution Context Stack - Closure 12
+                  setname: screens
+          - text: |
+              <br>
+              <br>
+              <strong>***** Function Factory with Closure *****</strong><br>
+              <br>
+              A function factory is a function that returns or makes other things (functions) using closure.
+            codes:
+                - url: "https://gist.github.com/soo1017/9271a9150ee35183a84cc953be12bccc.js"
+                  caption: Function Factory with Closure
+          - text: |
+              As you can see, two functions, greetEnglish() and greetSpanish(), are created based on selecting a language for the argument 'lang'.<br>
+              Will explain how the code works with the argument 'lang' used as closure step by step. Note that we will look at code at GEC level only<br>
+              <br>
+              In the creation phase of GEC<br>
+              <br>
+              * save memory for the function 'makeGreeting(...)'<br>
+              * save memory for the variable 'greetEnglish' and set as 'undefined'<br>
+              * save memory for the variable 'greetSpanish' and set as 'undefined'<br>
+              * ignore 'greetEnglish('Sam', 'Brother');'<br>
+              * ignore 'greetSpanish('Sam', 'Brother');'<br>
+              <br>
+              In the execution phase of GEC,<br>
+              <br>
+              * ignore 'makeGreeting(...)'<br>
+              * invoke 'makeGreeting('en')'. create FEC - makeGreeting('en') and save the value 'en' for the argument 'lang' in a memory and save and return the anonymous function 'function(firstname, lastname)'. FEC - makeGreeting('en') disappears.<br>
+              * assign the returned function into the variable 'greetEnglish'.<br>
+              * invoke 'makeGreeting('es')'. create FEC - makeGreeting('es') and save the value 'es' for the argument 'lang' in a memory and save and return the anonymous function 'function(firstname, lastname)'. FEC - makeGreeting('es') disappears.<br>
+              * assign the returned function into the variable 'greetSpanish'.<br>
+              <br>
+              * invoke 'greetEnglish('Sam', 'Brother')'. create FEC - greetEnglish('Sam', 'Brother') using the closure to get the value of the 'lang', then execute the function.<br>
+              * invoke 'greetSpanish('Sam', 'Brother')'. create FEC - greetSpanish('Sam', 'Brother') using the closure to get the value of the 'lang', then execute the function.<br>
+              <br>
+              As the definition of closure says, even after FEC disappears, its data for variables and others are left in the memory and can be used thru scope chain and closure.<br>
+              <br>
+              The image below shows how the JS engine gets the value of 'lang' for FEC - greetSpanish(...) using scope chain and closure. Any function created inside of the function will point to the execution context of the function.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure31.png"
+                  caption: Execution Context Stack - Closure 13
+                  setname: screens
+          - text: |
+              <br>
+              <br>
+              <strong>***** Callback with Closure *****</strong><br>
+              <br>
+              This part explains how a callback function works with closure where callback function is a function you give to another function, to be run when the other function is finished. 
+            codes:
+                - url: "https://gist.github.com/soo1017/25cd4534e807cef81553616ff9a49627.js"
+                  caption: Callback with Closure
+          - text: |
+              As you can see, two functions, setTimeout() drops an event when this 3 seconds has passed, then executes a callback function inside it.<br>
+              Will explain how the code works with the variable 'greeting' with closure step by step.<br>
+              <br>
+              In the creation phase of GEC<br>
+              <br>
+              * save memory for the function 'sayHelloLater(...)'<br>
+              * ignore the invoked function 'sayHelloLater();'<br>
+              <br>
+              In the execution phase of GEC,<br>
+              <br>
+              * ignore 'sayHelloLater(...)'<br>
+              * invoke 'sayHelloLater()'. create FEC - sayHelloLater().<br>
+              <br>
+              In the creation phase of FEC - sayHelloLater()<br>
+              <br>
+              * reserve memory for the variable 'greeting' and save 'undefined' in it.<br>
+              * ignore 'setTimeout'<br>
+              <br>
+              In the execution phase of FEC - sayHelloLater()<br>
+              <br>
+              * assign the value 'Hello' to the varible 'greeting'.<br>
+              * call and execute 'setTimeout()'. In event loop, setTimout goes off the browser, counts, and waits. Meantime, FEC - sayHelloLater() disappears.<br>
+              <br>
+              * After 3 seconds, invoke the callback function, 'console.log(greeting)'. create FEC - console.log(greeting).<br>
+              <br>
+              In the creation phase of FEC - anonymous function<br>
+              <br>
+              * ignore 'console.log(greeting)'<br>
+              <br>
+              In the execution phase of FEC - anonymous function<br>
+              <br>
+              * execute 'console.log(greeting)' by getting the value of 'greeting' using scope chain and closure.<br>
+              <strong>...</strong><br>
+              <br>
+              The image below depicts the closure and scope chain using outer environment reference.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure32.png"
+                  caption: Execution Context Stack - Closure 14
+                  setname: screens
+
+
+
+              

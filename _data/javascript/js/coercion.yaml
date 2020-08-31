@@ -1,0 +1,36 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/coercion"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Coercion"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              Convert a value from one type to another because it is dynamically typed in Javascript.
+    - title: "Description"
+      subsections:
+          - text: |
+              Type coercion is the process of converting value from one type to another (such as string to number, object to boolean, and so on). Any type, be it primitive or an object, is a valid subject for type coercion.<br>
+              To recall, primitives are: number, string, boolean, null, undefined + Symbol (added in ES6).<br>
+              <br>
+              Type coercion means that when the operands of an operator are different types, one of them will be converted to an 'equivalent' value of the other operand's type. For instance, if you do:<br>
+              <br>
+              boolean == integer<br>
+              <br>
+              the boolean operand will be converted to an integer: false becomes 0, true becomes 1. Then the two values are compared.<br>
+              However, if you use the non-converting comparison operator ===, no such conversion occurs. When the operands are of different types, this operator returns false, and only compares the values when they're of the same type.<br>
+              <br>
+              ---------------------------<br>
+              <br>
+              var num = 3 + '5';<br>
+              console.log(num);<br>
+              <br>
+              <br>
+              > 35<br>
+              <br>
+              ---------------------------<br>
+              <br>
+              The JS engine is smart enough to convert a number '3' into a string '3' according to a string '5'.<br> 
+              This is type coercion.
+            

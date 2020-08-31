@@ -1,0 +1,107 @@
+{% assign js = include.javascript %}
+<!-- Header -->
+<div id="top"></div>
+<div class="row header-row project-header" style="background-image:url({{js.banner}})">
+    <div class="header-tint">
+        <div class="col header-col">
+            <h1 class="header-title">{{js.title}}</h1>
+            <h3 class="header-subtitle project-header-subtitle">{{js.subtitle}}</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Overview section -->
+<div class="row content-row">
+    <div class="col content-col">
+        <div class="row title-row">
+            <div class="col">
+                <h1 class="section-title">{{ js.content_title }}</h1>
+            </div>
+        </div>
+        
+        {% for jsdetails in js.details %} 
+        <div class="row project-overview-row">
+            <div class="row overview-project-content-row"> 
+                <div class="col">
+                    <h2 class="subsection-title overview-project-title">{{ jsdetails.proglang }}</h2>
+                    <!-- // Create an empty array -->
+                    {% assign array_topics = '' | split: '' %}
+                    <!-- For FP -->
+                    {% assign array_fptopics = '' | split: '' %}
+                    <!-- // Push two items into one temp_array then push this temp array into a big array => 2-D array: [[] [] [] ...] -->
+                    {% for topic in jsdetails.topics %}
+                        {% assign temp_array = '' | split: '' %} 
+                        {% assign temp_array = temp_array | push: topic.name %}
+                        {% assign temp_array = temp_array | push: topic.link %}
+                        {% assign array_topics = array_topics | push: temp_array %}
+                        <!-- For FP -->
+                        {% if topic.sublink %}
+                            {% for fptopic in topic.sublink %}
+                                {% assign temp_array_fp = '' | split: '' %}
+                                {% assign temp_array_fp = temp_array_fp | push: fptopic.sname %}
+                                {% assign temp_array_fp = temp_array_fp | push: fptopic.slink %}
+                                {% assign array_fptopics = array_fptopics | push: temp_array_fp %}
+                            {% endfor %}
+                            {% assign sort_array_fptopics = array_fptopics | sort %}
+                        {% endif %}
+                        <!-- For FP -->
+                    {% endfor %}
+                    <!-- // Sort array alphabetically based on first item inside each array item-->
+                    {% assign sort_array_topics = array_topics | sort %}
+                    {% for topic in sort_array_topics %}
+                    <div class="left-col">
+                        <a class="project-text" href="{{topic[1]}}">{{ topic[0] }}</a>
+                        <!-- Start functional programming -->
+                        {% if topic[0] == 'Functional Programming' %}
+                            {% for fpsubtopic in sort_array_fptopics %}
+                                <div class="left-col sub-space">
+                                    <a class="project-text" href="{{fpsubtopic[1]}}">{{ fpsubtopic[0] }}</a>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div> 
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- Solution section -->
+<!-- <div class="row content-row" id="solution">
+
+    <div class="col content-col">
+        <div class="row title-row">
+            <div class="col">
+                <h1 class="section-title">{{ site.data.projects.general.solution_title }}</h1>
+            </div>
+        </div>
+        {% for section in project.details %}
+        <div class="row subsection-title-row">
+            <div class="col">
+                <h2 class="subsection-title">{{ section.title }}</h2>
+            </div>
+        </div>
+        {%
+            include project_subsection.html
+            sections=section.subsections
+        %}
+        {% endfor %}
+    </div>
+</div> -->
+<!-- Contacts section -->
+<div class="row offset-row footer-row" id="contact">
+    <div class="col content-col">
+        {% include contact.html %}
+        <div class="row">
+            <div class="col centered-col">
+                <a class="link" href="#top">{{ site.data.footer.top_link }}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col centered-col">
+                <a class="link" href="{{ site.url }}">{{ site.data.footer.home_link }}</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/object"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Object"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              Object is a pair of name/value. Variables are containers for data values in Javascript. Objects are variables too. But objects can contain many values, which are name/value pairs, are sitting on the memory.
+    - title: "Description"
+      subsections:
+          - text: |
+              Objects are variables. Variables are set with memory space and objects set with memory space as well.<br>
+              Objects have 'primitive' property, 'object' property, and their 'function' method. Objects have their address reference to their properties and methods as in the picture.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/object/object1.png"
+                  caption: Object in JS
+                  setname: screens
+          - text: |
+              The following code shows how to create a object. There are a few ways to create it. Each method will be discussed one by one.
+            codes:
+                - url: "https://gist.github.com/soo1017/1525dd31539dc68cda956bf354993f0f.js"
+                  caption: Object Creation in JS
+          - text: |
+              <br>
+              <br>
+              <strong>***** Object Creation with a keyword 'new' *****</strong><br>
+              <br>
+              The method of using a keyword 'new' is similar to other languages' way like C. It is simple to assign the keyword 'new' and 'Object()' to a variable that you want to make as an object. Later, you can add members (porperties, methods) to the object using the 'member access, "."', 'computed member access, "[]"' operators.
+            codes:
+                - url: "https://gist.github.com/soo1017/d3d95d51d17386dd622bdb0f99911f3f.js"
+                  caption: Object Creation using a Keyword 'new'
+          - text: |
+              After an object is created with the keyword 'new', its member can be created using the dot '.' operator, which is 'member access' operator. Objects are a pair of name/value. Using the dot '.', the name will be added after the dot '.'. The value will be added by assigning it to the name.<br>
+              <br>
+              object.name = "value"<br>
+              <br>
+              Any member (property, method) can be created as above.<br>
+              <br>
+              Another way to create objects' members is to use the bracket '[]', which is 'computed member access' operator like below. Like the dot '.', this way works for both member property and method.<br>
+              <br>
+              object["name"] = "value"<br>
+              <br>
+            codes:
+                - url: "https://gist.github.com/soo1017/35f996b9fa87ea8de7d4d5f0ae543137.js"
+                  caption: Object creation using Object Literal
+          - text: |
+              <br>
+              <br>
+              <strong>***** Object Creation with Object Literal *****</strong><br>
+              <br>
+              The way of using object literal with curly bracket '{}' is effective and most popular. When the JS engine encounters the 'curly bracket' without 'if' or others, it interprets the curly bracket as an object, not the block.
+              The member can be created using the dot '.' operator and the bracket '[]' like the way using the keyword 'new'.<br>
+              <br>
+              object.name = "value"<br>
+              <br>
+              object["name"] = "value"<br>
+              <br>
+              In this example, the value is another object. Objects can be a member as mentioned early.
+            codes:
+                - url: "https://gist.github.com/soo1017/eb097b7f77d15ba1fcf95ac83dbfa7f9.js"
+                  caption: Object creation using Object.create()
+          - text: |
+              <br>
+              <br>
+              <strong>***** Object Creation with Object.create() *****</strong><br>
+              <br>
+              This way comes in very handy when you are asked to create objects from other existing objects and not directly using the ‘new’ keyword. It is like extending the existing object into a bigger object by adding another object.<br>
+              For example, the object "A" should be attached to the object "B". First, create the object "A" using whatever object creating method is easy for you. Then use '<strong>var B = Object.create(A, {B's name/value})</strong>' to create an object like 'B <- A' in the proto chain. The code above shows it clearly.
+            codes:
+                - url: "https://gist.github.com/soo1017/93a79f5dbb5203980e7c8aa913a3c91f.js"
+                  caption: Object creation using Object.assign()
+          - text: |
+              <br>
+              <br>
+              <strong>***** Object Creation with Object.assign() *****</strong><br>
+              <br>
+              The way of using 'Object.assign()' is to add two objects into a bigger object as its member objects. The Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object. It will return the target object.<br>
+              The dot '.' or bracket '.' is to add more members into a object.
+            codes:
+                - url: "https://gist.github.com/soo1017/d44083f5d1aac681ef35af7e197de600.js"
+                  caption: Object creation using Class
+          - text: |
+              <br>
+              <br>
+              <strong>***** Object Creation with Class *****</strong><br>
+              <br>
+              You will notice that this method is similar to using ‘new’ with user defined constructor function. The constructor functions are now replaced by classes as they are supported through ES6 specifications.<br>
+              <br>
+              <br>
+              Note that when the JS engine cannot find any member of an object, it returns 'undefined'.<br>
+              <br>
+              --------------------------------<br>
+              <br>
+              var person = {}<br>
+              console.log(person.firstname)<br>
+              <br>
+              > undefined<br>
+              <br>
+              --------------------------------<br>
+
+          

@@ -1,0 +1,19 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/hoisting"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Hoisting"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+    - title: "Description"
+      subsections:
+          - text: |
+              In JavaScript, a variable can be declared after it has been used. In other words; a variable can be used before it has been declared. Note that variables and constants declared with let or const are not hoisted. And JavaScript only hoists declarations, not initializations. If you fully understand how execution context works, you will be able to grasp the concept of 'hoisting' easily. During the creation phase of execution context, the JS engine saves memory space for all variables wihtout their assigned values ('undefined') by coming line by line from the top of the code in the scope of execution context before transiting into the execution phase. So it is OK to declare variables after they are used. Note that JavaScript in strict mode does not allow variables to be used if they are not declared. Study "use strict" in the next chapter. Two codes in the picture below show the same result with 'hoisting'.
+            codes: 
+                - url: "https://gist.github.com/soo1017/be2059dbed7a891b600902b977d8c7fa.js"
+                  caption: Hoisting Example (2 codes are alike in the result)
+
+    

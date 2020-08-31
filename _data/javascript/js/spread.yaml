@@ -1,0 +1,88 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/spread"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Spread Operator and Destructuring"
+details:
+    - title: "Definition (from MDN)"
+      subsections:
+          - text: |
+              Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+    - title: "Description (from Codeburst.com)"
+      subsections:
+          - text: |
+              The evolution of JavaScript to ES6 version has brought a whole array of new tools and utilities. These tools allow us to perform some common operation in a more concise and elegant way. One such new feature is the spread operator. The operator’s shape is three consecutive dots and is written as: '...'.<br>
+              <br>
+              The Spread Operator has more than one function. In a sense, it is overloaded. It can also be used as rest operator in conjugation with destructuring. In ES6, the spread operator worked only for arrays. However, according to a proposal that has reached Stage 4, you can use the spread operator on objects too.<br>
+              <br>
+              When a proposal reaches Stage 4, it means that it has been finalised by the TC39 committee and will be available in the next release of ES version. In this case, the next version will be ES2018(ES9). We are going to see both the use cases in this article.
+          - text: |
+              <strong>***** Spread Operator *****</strong><br>
+              <br>
+              The spread operator allows an iterable to spread or expand individually inside a receiver. Iterables are anything that can be looped over such as strings, arrays, and sets. The code below as an example.
+            codes: 
+                - url: "https://gist.github.com/soo1017/f837290156f8d38396027af3a4ac79d8.js"
+                  caption: Spread Operator 1
+          - text: |
+              the three dots, '...', act upon the string in the variable 'nameString'and spread each individual character inside the receiver. The receiver is the array. If you omit the receiver, you will get an error.
+            codes: 
+                - url: "https://gist.github.com/soo1017/4ba97846c204ecbc5c77b3ad9459ca3a.js"
+                  caption: Spread Operator 2
+          - text: |
+              The instance above shows that the spread operator takes items of an array as arguments of the function 'console.log' like 'console.log('My', 'name', 'is', 'Sam')'. and prints out them. The output of the spread operator depends on what the receiver is.
+            codes: 
+                - url: "https://gist.github.com/soo1017/927b0836c52e5b15c7f0e7736804136f.js"
+                  caption: Spread Operator 3
+          - text: |
+              Another example is above. Instead of inserting an array into the function 'Math.max' as an argument, first assign an array into a constant 'const' and then insert all items of the constant into as arguments of the function 'Math.max' with the spread operation. The spread operator can handle any array regardless of how many items in the array. The receiver, in this case, is max() function and it receives the individual numbers as arguments.
+            codes: 
+                - url: "https://gist.github.com/soo1017/be3b289f3ce0d086986f70b1afd93258.js"
+                  caption: Spread Operator 4
+          - text: |
+              Here we are spreading an object obj. The receiver in this case is another object newObj. When the thing that is being spread is an object and the receiver is an object too, then the key-value pairs are copied together instead of just values. Mostly, spread operator with objects is used to make a copy of an existing object or to make a new object with more properties. Here’s how you can “combine” two objects.
+            codes: 
+                - url: "https://gist.github.com/soo1017/054a2748c75267921ac9b703e0714c2f.js"
+                  caption: Spread Operator 5
+          - text: |
+              The 'newObj' has the properties of 'obj1', 'obj2'. It also has an extra property 'city'.<br>
+              <br>
+              <br>
+              <strong>***** Destructuring *****</strong><br>
+              <br>
+              Destructuring means taking out ( technically, making a copy of ) individual items from an object or an array and assigning them to a variable.
+            codes: 
+                - url: "https://gist.github.com/soo1017/2840562a6e608ad2a6c3a46b422cbab4.js"
+                  caption: Destructuring 1
+          - text: |
+              We use 'const' because we intend to make the variables constant. 'let' could have also been used instead. Then, we wrote the names of the variables in an array-like syntax, that is, beginning and ending with a [ and ] since we are destructuring from an array. And assigning any value to a new constant variable like 'houseNo = 101' inside the bracket does not work.<br>
+              Notice two consecutive commas in [ houseNo, , city ]. It looks like it is missing something in between those two commas. We can omit values from being destructured. If a variable name is not specified, the value is not assigned to anything. In this case, we need only houseNo and city. So we exclude the street name.
+            codes: 
+                - url: "https://gist.github.com/soo1017/5b402d69284c5544b6edb35920e0f342.js"
+                  caption: Destructuring 2
+          - text: |
+              It uses destructuring to take out the firstName and ageproperty from the details object. Unlike arrays, we need to put a pair of curly braces because we are destructuring from an object. Had it been an array, you would have used a square bracket as in the previous example.<br>
+              In arrays, we could have specified any variable name for the values to be destructured. However, with an object, the variable name has to match the property name in the object. That’s why in the example we wrote firstNamesince details has that property. An unknown property would return 'undefined'.<br>
+              <br>
+              It is important to note that destructuring does not remove properties or values from the original object or array. It merely copies it.
+          - text: |
+              <br>
+              <strong>***** Rest Operator *****</strong><br>
+              <br>
+              Syntactically, it looks exactly the same as spread operator. But it’s function is the exact opposite of the spread Operator. If Spread operator expands individual items, then rest operator collects a bunch of items and puts them into arrays and objects.
+            codes: 
+                - url: "https://gist.github.com/soo1017/a8c1adcc6a451ce48a90f499948c1d52.js"
+                  caption: Rest 1
+          - text: |
+              Using destructuring, we extract the firstNumber. We don’t want individual numbers anymore. So we collect them in the restOfTheNumbers array.<br>
+              Notice that restOfTheNumbers is an array. Since rest operator collects items, it needs to place them in a container. That container is an array when we destructure from an array or strings.
+            codes: 
+                - url: "https://gist.github.com/soo1017/663219f7690a1995185ed10cf15d73b4.js"
+                  caption: Rest 2
+          - text: |
+              A few other things to note are —<br>
+              <br>
+              * All concepts of destructuring apply with rest operator since rest operator is nothing more than a specialised form of destructuring.<br>
+              * It is always to the left side of the = whereas the spread operator will be on the right side.<br>
+              * In arrays and objects, the rest operator can only come at the end. That is, this syntax won’t work.<br>
+              * These utilities are popularly used for immutable data.
+          

@@ -1,0 +1,60 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/object_json"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Object Literal & JSON"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              JSON is JavaScript Object Notation and a syntax for storing and exchanging data. Object literal is a syntax to define an object in Javascript.
+    - title: "Description"
+      subsections:
+          - text: |
+              Object literal is not discussed here a lot because it is already much mentioned in the section of 'Object'. in this section, JSON will be discussed mainly. The concept of JSON came from Object literal.<br>
+              When exchanging data between a browser and a server, the data can only be text. JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server. We can also convert any JSON received from the server into JavaScript objects. This way we can work with the data as JavaScript objects, with no complicated parsing and translations.<br>
+              <br>
+              If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:<br>
+              <br>
+              ***** Send Data to the Server with JSON *****<br>
+              <br>
+              var person = {name: "John", age: 31, city: "NY"};<br>
+              var myJSON = JSON.stringify(person);    // Convert Object into JSON<br>
+              window.location = "demo_json.php?x=" + myJSON;<br>
+              <br>
+              ***** Recieve Data from the Server with JSON *****<br>
+              <br>
+              var myJSON = '{"name":"John", "age":31, "city":"New York"}';<br>
+              var person = JSON.parse(myJSON);        // Convert JSON into Object<br>
+              document.getElementById("demo").innerHTML = person.name;<br>
+              <br>
+              Note that JSON syntax rule is very strict. JSON data is written as name/value pairs. A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:<br>
+              <br>
+              ***** Syntax Rule of JSON and Object Literal *****<br>
+              <br>
+              JSON: { <strong>"name"</strong>:"John" }    // double quote<br>
+              JS Object Literal: { <strong>name</strong>:"John" }<br>
+    - title: "JSON & XML"
+      subsections:
+          - text: |
+              Both JSON and XML can be used to receive data from a web server. The following JSON and XML examples both define an employees object.<br>
+              <br>
+              ***** JSON *****<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/69444df935ce7b9c96b02475ba1850c9.js"
+                  caption: JSON
+          - text: |
+              ***** XML *****<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/f409f58b5f05305543bdbe5c475e9010.js"
+                  caption: XML
+          - text: |        
+              ***** Why JSON is Better Than XML *****<br>
+              <br>
+              XML is much more difficult to parse than JSON.<br>
+              JSON is parsed into a ready-to-use JavaScript object.<br>
+              For AJAX applications, JSON is faster and easier than XML<br>
+
+
+            
+          

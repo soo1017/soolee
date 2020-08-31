@@ -1,0 +1,82 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/array"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Array"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              Array is a collection of anything in Javascript. Unlike other languages, array can consist of different data types in Javascript with the bracket '[]'. For instance,<br>
+              <br>
+              var arry = [3, true, "Hi", {address: '444 Example St'}]
+    - title: "Description"
+      subsections:
+          - text: |
+              Array has many its built-in methods.<br>
+              <br>
+              <strong>- toString()</strong>: converts an array to a string of (comma separated) array values.<br>
+              <br>
+              <strong>- join()</strong>: join() method also joins all array elements into a string. It behaves just like toString(), but in addition you can specify the separator.<br>
+              <br>
+              <strong>- pop()</strong>: pop() method removes the last element from an array. returns the value that was "popped out".<br>
+              <br>
+              <strong>- push()</strong>: push() adds a new element to an array (at the end). returns the new array length.<br>
+              <br>
+              <strong>- shift()</strong>: shift() method removes the first array element and "shifts" all other elements to a lower index. returns the string that was "shifted out".<br>
+              <br>
+              <strong>- unshift()</strong>: unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements. returns the new array length.<br>
+              <br>
+              <strong>- length</strong>: length property provides an easy way to append a new element to an array.<br>
+              fruits[fruits.length] = "Kiwi"; // Appends "Kiwi" to fruits<br>
+              <br>
+              <strong>- delete</strong>: the JavaScript operator delete is used to delete an element.<br>
+              delete fruits[0]; // Changes the first element in fruits to undefined<br>
+              Note that using delete may leave undefined holes in the array. Use pop() or shift() instead.<br>
+              <br>
+              <strong>- splice()</strong>: splice() method can be used to add new items to an array.<br>
+              fruits.splice(2, 0, "Lemon", "Kiwi"); // where the first parameter (2) defines the position where new elements should be added (spliced in). the second parameter (0) defines how many elements should be removed.<br>
+              <br>
+              <strong>- splice()</strong>: splice() removes elements without leaving "holes" in the array.<br>
+              fruits.splice(0, 1);        // Removes the first element of fruits<br>
+              <br>
+              <strong>- concat()</strong>: concat() method creates a new array by merging (concatenating) existing arrays. concat() method does not change the existing arrays. It always returns a new array. concat() method can take any number of array arguments.<br>
+              <br>
+              <strong>- slice()</strong>: slice() method slices out a piece of an array into a new array. slice() method creates a new array. It does not remove any elements from the source array.<br>
+              <br>
+              <strong>- sort()</strong>: sort() method sorts an array alphabetically.<br>
+              <br>
+              <strong>- reverse()</strong>: reverse() method reverses the elements in an array.<br>
+              <br>
+              <strong> compare function *****</strong>: The purpose of the compare function is to define an alternative sort order. The compare function should return a negative, zero, or positive value, depending on the arguments.<br>
+              e.g.) function(a, b){return a - b}: sort numbers.<br>
+              Math.max.apply(null, arry): return a max number.<br>
+              Math.min.apply(null, arr): return a min number.<br>
+              <br>
+              <br>
+              Array iteration methods operate on every array item.<br>
+              <br>
+              <strong>- forEach()</strong>: forEach() method calls a function (a callback function) once for each array element.<br>
+              Note that the function takes 3 arguments: The item value, The item index, The array itself<br>
+              e.g.) myFunction(value, index, array)<br>
+              <br>
+              <strong>- map()</strong>: map() method creates a new array by performing a function on each array element. map() method does not execute the function for array elements without values. map() method does not change the original array.<br>
+              <br>
+              <strong>- filter()</strong>: filter() method creates a new array with array elements that passes a test.<br>
+              <br>
+              <strong>- reduce()</strong>: reduce() method runs a function on each array element to produce (reduce it to) a single value. reduce() method works from left-to-right in the array. reduce() method does not reduce the original array.<br>
+              <br>
+              <strong>- reduceRight()</strong>: reduceRight() method runs a function on each array element to produce (reduce it to) a single value. reduceRight() works from right-to-left in the array. reduceRight() method does not reduce the original array.<br>
+              <br>
+              <strong>- every()</strong>: every() method check if all array values pass a test.<br>
+              <br>
+              <strong>- some()</strong>: some() method check if some array values pass a test.<br>
+              <br>
+              <strong>- indexOf()</strong>: indexOf() method searches an array for an element value and returns its position.<br>
+              <br>
+              <strong>- lastIndexOf()</strong>: lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.<br>
+              <br>
+              <strong>- find()</strong>: find() method returns the value of the first array element that passes a test function.<br>
+              <br>
+              <strong>- findIndex()</strong>: findIndex() method returns the index of the first array element that passes a test function.<br>
+            

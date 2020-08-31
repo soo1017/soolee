@@ -1,0 +1,30 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/arguments_"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "'arguments'"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              'arguments' is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.<br>
+              “Array-like” means that arguments has a length property and properties indexed from zero, but it doesn't have Array's built-in methods like forEach() or map().
+    - title: "Description"
+      subsections:
+          - text: |
+              The arguments object is a local variable available within all non-arrow functions. You can refer to a function's arguments inside that function by using its arguments object. It has entries for each argument the function was called with, with the first entry's index at 0. Like mentioned before, The arguments object is not an Array. It is similar, but lacks all Array properties except 'length'. However, it can be converted to a real Array.<br>
+              <br>
+              var args = Array.prototype.slice.call(arguments);<br>
+              <br>
+              // Using an array literal is shorter than above but allocates an empty array<br>
+              var args = [].slice.call(arguments);
+          - text: |
+              <br>
+              <br>
+              <strong>***** Spread Syntax (...) *****</strong>
+              <br>
+              Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.<br>
+            codes:
+                - url: "https://gist.github.com/soo1017/32262f3dbaeb5635de9af6fd7aee3395.js"
+                  caption: Spread Syntax (...)
+              

@@ -1,0 +1,257 @@
+title: "Javascript Learning"
+url: "http://localhost:4000/javascript/js/scope_chain"
+subtitle: "Life flourishes with programming language learning"
+banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+content_title: "Scope Chain"
+details:
+    - title: "Definition"
+      subsections:
+          - text: |
+              When a variable is used in JavaScript, the JavaScript engine will try to find the variable’s value in the current scope. If it could not find the variable, it will look into the outer scope and will continue to do so until it finds the variable or reaches global scope.<br>
+              If it’s still could not find the variable, it will either implicitly declare the variable in the global scope (if not in strict mode) or return an error.
+    - title: "Description"
+      subsections:
+          - text: |
+              Before explaining about scope chain, there are some concepts to understand first. They are 'variable environment', 'outer environment', and 'lexical environment'.<br>
+              It's easier to understand the Lexical Environment here when you break it up into two more underlying concepts, the Variable Environment and the Outer Environment.<br>
+              <br>
+              Each Execution Context has an Outer Environment and a Variable Environment. The Outer Environment and the Variable Environment make up the Lexical Environment. That is, the Variable Environment is a certain type of Lexical Environment. A Lexical Environment can be thought of as an internal JavaScript engine construct that holds identifier-variable mappings. The identifier is the name of the variable or function and variable is a reference to the actual data type stored by the identifier (e.g. Object, Number, String, Boolean, null, undefined). A Lexical Environment also has a link to any Outer Environment (i.e. its scope chain), so it is used to resolve identifiers outside the current Execution Context. Ultimately, a corresponding Lexical Environment is created for every Execution Context.<br>
+              <br>
+              In simplest terms, Variable Environment refers to where the variables live that you created. In the below example, each myVar is distinct and they do not touch each other. First, a global Execution Context is created. In the Creation Phase of the Execution Context, both the Outer Environment and Variable Environment of the Lexical Environment is created. In terms of the Variable Environment, myVar is placed in memory with undefined value and b and a functions are put into memory with a reference to their definitions. These properties are attached to the global object referenced by 'this'. The properties we defined in the global Execution Context are stored in the global Variable Environment. Then in the Execution Phase of the Execution Context, myVar is assigned the value of 1. So now in memory for the global Execution Context, myVar has a value of 1. This is stored in the global Variable Environment.<br>
+              <br>
+              Then during execution, the a function is invoked. A new Execution Context is created and put on the Execution Stack. It goes through the Creation and Execution Phase of the Execution Context. The myVar variable declared here is placed in a new area in memory separate from the other Execution Context. A Lexical Environment is created mapping the identifier to its variable. It in effect creates a Variable Environment for any variables defined in this Execution Context. This Variable Environment is distinct from any other Variable Environment. The Execution Phase occurs and myVar is assigned a value of 2. Now in this Variable Enviroment, myVar has a value of 2, whereas in the global ExecutionContext, myVar has a value of 1. Note that if we were to refer to a variable in this new Execution Context that does not exist in the current Execution Context, then the Lexical Environment will search its parent Lexical Environment for the variable, aka the Outer Environment. Since JavaScript is single-threaded, once myVar is assigned a value of 2, it moves on to the next statement, which is the invocation of b, and a new Execution Context is created for b and the same process occurs again.<br>
+            codes: 
+                - url: "https://gist.github.com/soo1017/60bfe7e0606e20f49bc6c62181c0e02c.js"
+                  caption: Variable Environment
+                  # 
+                  # 
+                  # 
+          - text: |
+              <br>
+              <br>
+              <strong>***** With Example *****</strong><br>
+              <br>
+              Let us dig more into the code above line by line to fully understand 'variable environment', 'outer environment', and 'lexical environment'.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment1.png"
+                  caption: Execution Context Stack - A Created GEC in ECS
+                  setname: screens
+          - text: |
+              The following description explains about the above picture.<br>
+              <br>
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'function b() {...}': => set a memory space for the function 'b()' to save its name, codes, ...<br> 
+              <strong>2.</strong> 'function a() {...}': => set a memory space for the function 'a()' to save its name, codes, ...<br>
+              <strong>3.</strong> 'var myVar = 1': => set a memory space for the variable 'myVar' wihtout assigning '1' in it. Set as 'undefined'.<br>
+              <strong>4.</strong> 'console.log(myVar)': => ignore.<br>
+              <strong>5.</strong> 'a()': => ignore.<br>
+              <strong>6.</strong> 'console.log(myVar)': => ignore.<br>
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>7.</strong> 'function b() {...}': => ignore<br> 
+              <strong>8.</strong> 'function a() {...}': => ignore<br>
+              <strong>9.</strong> 'var myVar = 1': => assign the value '1' into a memory space for the variable 'myVar'.<br>
+              <strong>10.</strong> 'console.log(myVar)': => print out the value '1' of the variable 'myVar'.<br>
+              <strong>11.</strong> 'a()': => 'a()' function call or invocation craetes FEC of 'a()' and pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment2.png"
+                  caption: Execution Context Stack - A Created FEC-a() in ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-a()</strong><br>
+              <br>
+              <strong>12.</strong> 'var myVar = 2': => set a memory space for the variable 'myVar' wihtout assigning '1' in it in the scope of FEC-a(). Set as 'undefined'.<br>
+              <strong>13.</strong> 'console.log(myVar)': => ignore<br>
+              <strong>14.</strong> 'b()': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-a()</strong><br>
+              <br>
+              <strong>15.</strong> 'var myVar = 2': => assign the value '2' into a memory space for the variable 'myVar' in the scope of FEC-a().<br>
+              <strong>16.</strong> 'console.log(myVar)': => print out the value '2' of the variable 'myVar' in the scope of FEC-a().<br>
+              <strong>17.</strong> 'b()': => 'b()' function call or invocation craetes FEC of 'b()' and pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment3.png"
+                  caption: Execution Context Stack - A Created FEC-b() in ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-b()</strong><br>
+              <br>
+              <strong>18.</strong> 'var myVar': => set a memory space for the variable 'myVar' wihtout assigning a value in it in the scope of FEC-b(). Set as 'undefined'.<br>
+              <strong>19.</strong> 'console.log(myVar)': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-b()</strong><br>
+              <br>
+              <strong>20.</strong> 'var myVar': => ignore.<br>
+              <strong>21.</strong> 'console.log(myVar)': => print out the value 'undefined' of the variable 'myVar' in the scope of FEC-b().<br>
+              <br>
+              <strong>FEC-b() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of FEC-a()</strong> and continues.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment4.png"
+                  caption: Execution Context Stack - A FEC-b() popped out from ECS
+                  setname: screens
+          - text: |
+              The <strong>Execution Phase of FEC-a()</strong><br>
+              <br>
+              <strong>FEC-a() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of GEC</strong> and continues.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment5.png"
+                  caption: Execution Context Stack - A FEC-a() popped out from ECS
+                  setname: screens
+          - text: |
+              The <strong>Execution Phase of GEC()</strong><br>
+              <br>
+              <strong>22.</strong> 'console.log(myVar)': => print out the value '1' of the variable 'myVar' in the scope of GEC.<br>
+              <strong>GEC is poped out from ECS</strong> because its work is done. ECS is empty now.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment6.png"
+                  caption: Execution Context Stack - A GEC popped out from ECS
+                  setname: screens
+          - text: |
+              The results print out '1, 2, undefined, 1' in order as in the code picture above.<br>
+              <br>
+              The variable 'myVar' in each execution context is clearly declared and lives in its own execution context. Variable environment of the variable 'myVar' is its own execution context as in the picture above. The variable 'myVar' in its own execution context does not need to employ its 'outer environment' to define its variable environment.<br>
+              <br>
+              It's also very important to note here that since these functions are invoked without the new keyword, this refers to the object in the global Execution Context. This can be proven easily:<br>
+            codes: 
+                - url: "https://gist.github.com/soo1017/3a2de18dee001cfe28d025ca9cbbb07e.js"
+                  caption: Variable Environment
+          - text: |
+              Above, 'this.a' refers to the 'a' defined in the global Execution Context, since 'this' is refering to the global object, which in browsers is the Window object.<br>
+              <br>
+              Now that we discussed the Variable Environment, let's discuss the Outer Enviroment of the Lexical Environment. This leads us to the Scope Chain. First, we must ask what is an Outer Environment of an Execution Context? In the below example, in the case of the function b, its Outer Environment is the Global Execution Context. This is also the case of the function a. This is true for function b, even though function a is directly below function b in the Execution Stack. The Outer Environment invokes the concept of the Lexical Environment. The Lexical Environment highlights the idea that where something is written physically in your code is important. It determines how identifier/variable mappings live in your code and how they will connect to each other. So we must ask ourselves, where does function b sit lexically? It lexically sits on top of the global Outer Environment. The function b is not sitting inside of function a; instead, it is sitting at the same level as the global Outer Environment. When you ask for a variable while running a line of code within any particular Execution Context, if the Engine cannot find the variable within the Variable Environment of the current Execution Context, it will look for the variables in the Outer Environment of the current Execution Context. Now even if there are 10 Execution Contexts' stacked on each other, if the 10th Execution Context is sitting lexically on the global Outer Environment, when it searches for its Outer Environment in each of the other 9 Execution Contexts', it will search all the way to the global Execution Context, since the code sits lexically on the Outer Environment. This process of searching for a given Execution Context's Outer Environment is known as <strong>the Scope Chain</strong> in JavaScript. Remember scope asks 'where can I access a variable?'. And the Scope Chain is those links of Outer Environment references.
+            codes: 
+                - url: "https://gist.github.com/soo1017/c03fbee7d171e17c47067a628586aabd.js"
+                  caption: Scope Chain
+                  # 
+                  # 
+                  # 
+          - text: |
+              <br>
+              <br>
+              <strong>***** With Example *****</strong><br>
+              <br>
+              Let us check the above code line by line with its execution contexts considering the scope chain.<br>
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain1.png"
+                  caption: Execution Context Stack - A Created GEC in ECS
+                  setname: screens
+          - text: |
+              The following description explains about the above picture.<br>
+              <br>
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'function b() {...}': => set a memory space for the function 'b()' to save its name, codes, ...<br> 
+              <strong>2.</strong> 'function a() {...}': => set a memory space for the function 'a()' to save its name, codes, ...<br>
+              <strong>3.</strong> 'var myVar = 1': => set a memory space for the variable 'myVar' wihtout assigning '1' in it. Set as 'undefined'.<br>
+              <strong>4.</strong> 'a()': => ignore.<br>
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>5.</strong> 'function b() {...}': => ignore<br> 
+              <strong>6.</strong> 'function a() {...}': => ignore<br>
+              <strong>7.</strong> 'var myVar = 1': => assign the value '1' into a memory space for the variable 'myVar'.<br>
+              <strong>8.</strong> 'a()': => 'a()' function call or invocation craetes FEC of 'a()' and it pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain2.png"
+                  caption: Execution Context Stack - A Created FEC-a() in ECS
+                  setname: screens  
+          - text: |
+              The <strong>Creation Phase of FEC-a()</strong><br>
+              <br>
+              <strong>9.</strong> 'var myVar = 2': => set a memory space for the variable 'myVar' wihtout assigning '1' in it in the scope of FEC-a(). Set as 'undefined'.<br>
+              <strong>10.</strong> 'b()': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-a()</strong><br>
+              <br>
+              <strong>11.</strong> 'var myVar = 2': => assign the value '2' into a memory space for the variable 'myVar' in the scope of FEC-a().<br>
+              <strong>12.</strong> 'b()': => 'b()' function call or invocation craetes FEC of 'b()' and pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain3.png"
+                  caption: Execution Context Stack - A Created FEC-b() in ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-b()</strong><br>
+              <br>
+              <strong>13.</strong> 'console.log(myVar)': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-b()</strong><br>
+              <br>
+              <strong>14.</strong> 'console.log(myVar)': => <strong>try to print out the value of 'myVar'. But the JS engine cannot find any value of it. It cannot find any memory space for 'myVar' because it is never declared with the keyword 'var' in the scope of FEC-b(). The JS engine needs 'outer environment' to find the value outside FEC-b(). It lexically sits on top of the global Outer Environment. Obviously, FEC-a() does not carry any data of FEC-b() as seen in the pictures. Using 'outer environment' of FEC-b(), the JS engine find the value of 'myVar' from GEC because the memory of FEC-b() sits on the GEC and print out '1', which is the value of the variable 'myVar' in GEC. This is called 'scope chain'.</strong><br>
+              <br>
+              <strong>FEC-b() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of FEC-a()</strong> and continues.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain4.png"
+                  caption: Execution Context Stack - A FEC-b() popped out from ECS
+                  setname: screens
+          - text: |
+              The rest of the ECS operations will be the same as the previous instance above. FEC-a() and GEC will pop out from ECS sequentially until ECS is empty.<br>
+              <br>
+              You might have thought that myVar in b would be 2, since the b function would look into its parent Execution Context, which is a (which is the Execution Context directly below b's Execution Context in the Execution Stack). But that is not how the Outer Environment of the Lexical Environment works. Because the Outer Environment of b is the global Execution Context, myVar in b will be the value 1.<br>
+              <br>
+              Now it's possible to change the Lexical Environment of a function. We can change the lexical environment of the function b by placing it physically inside of function a. Since we changed its physical location, the Outer Environment of the Lexical Environment of the function b changes.
+            codes: 
+                - url: "https://gist.github.com/soo1017/bc59e894026a79d09375e321f1ac577c.js"
+                  caption: Scope Chain - Function b() lexically sitting on Function a()
+                  # 
+                  # 
+                  # 
+          - text: |
+              <br>
+              <br>
+              <strong>***** With Example *****</strong><br>
+              <br>
+              Let us check the case that is mentioned right above to see what will happen with the code above.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain21.png"
+                  caption: Execution Context Stack - A Created GEC in ECS
+                  setname: screens
+          - text: |
+              The following description explains about the above picture.<br>
+              <br>
+              The <strong>JS engine creates GEC</strong> in the ECS.<br>
+              The <strong>Creattion Phase of GEC</strong><br>
+              <br>
+              <strong>1.</strong> 'function a() {...}': => set a memory space for the function 'a()' to save its name, codes, ...<br> 
+              <strong>2.</strong> 'var myVar = 1': => set a memory space for the variable 'myVar' wihtout assigning '1' in it. Set as 'undefined'.<br>
+              <strong>3.</strong> 'a()': => ignore.<br>
+              <br>
+              The <strong>Execution Phase of GEC</strong><br>
+              <br>
+              <strong>4.</strong> 'function a() {...}': => ignore<br>
+              <strong>5.</strong> 'var myVar = 1': => assign the value '1' into a memory space for the variable 'myVar'.<br>
+              <strong>6.</strong> 'a()': => 'a()' function call or invocation craetes FEC of 'a()' and it pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain22.png"
+                  caption: Execution Context Stack - A Created FEC-a() in ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-a()</strong><br>
+              <br>
+              <strong>7.</strong> 'function b() {...}': => set a memory space for the function 'b()' to save its name, codes, ...<br>
+              <strong>8.</strong> 'var myVar = 2': => set a memory space for the variable 'myVar' wihtout assigning '2' in it. Set as 'undefined'.<br>
+              <strong>9.</strong> 'b()': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-a()</strong><br>
+              <br>
+              <strong>10.</strong> 'function b() {...}': => ignore<br>
+              <strong>11.</strong> 'var myVar = 2': => assign the value '2' into a memory space for the variable 'myVar' in the scope of FEC-a().<br>
+              <strong>12.</strong> 'b()': => 'b()' function call or invocation craetes FEC of 'b()' and pops into ECS.
+            images:
+                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain23.png"
+                  caption: Execution Context Stack - A Created FEC-b() in ECS
+                  setname: screens
+          - text: |
+              The <strong>Creation Phase of FEC-b()</strong><br>
+              <br>
+              <strong>13.</strong> 'console.log(myVar)': => ignore<br>
+              <br>
+              The <strong>Execution Phase of FEC-b()</strong><br>
+              <br>
+              <strong>14.</strong> 'console.log(myVar)': => <strong>try to print out the value of 'myVar'. But the JS engine cannot find any value of it. It cannot find any memory space for 'myVar' because it is never declared with the keyword 'var' in the scope of FEC-b(). The JS engine needs 'outer environment' to find the value outside FEC-b(). It lexically sits on top of FEC-a(), which is circled in the picture. Obviously, GEC does not carry any data of FEC-b() this time as seen in the pictures. Using 'outer environment' of FEC-b(), the JS engine find the value of 'myVar' from FEC-a() because the memory of FEC-b() sits on the FEC-a() and print out '2', which is the value of the variable 'myVar' in FEC-a().</strong><br>
+              <br>
+              <strong>FEC-b() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of FEC-a()</strong> and continues.<br>
+              The rest of the ECS operations will be the same as the previous instance above. This action is called 'scope chain'.
