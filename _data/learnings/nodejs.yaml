@@ -1,12 +1,12 @@
 title: "NodeJS"
-url: "http://localhost:4000/nodejs"
+url: "https://soo1017.github.io/soolee/nodejs"
 subtitle: "Life flourishes with programming language learning"
-thumbnail: "http://localhost:4000/assets/img/learnings/nodejs/thumbnail.png"
-banner: "http://localhost:4000/assets/img/learnings/nodejs/main_header.png"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/learnings/nodejs/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/nodejs/main_header.png"
 content_title: "Working On Now"
 details:
     # - proglang: "NodeJS"
       # topics:
-      #   - link: "http://localhost:4000/nodejs/nj/hi"
+      #   - link: "https://soo1017.github.io/soolee/nodejs/nj/hi"
       #     name: "1. What happens when a JS code starts?"
     

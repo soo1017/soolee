@@ -1,7 +1,7 @@
 title: "YEN"
 subtitle: "Youth Empowring Nation (YEN) - NPO"
-thumbnail: "http://localhost:4000/assets/img/projects/yen/thumbnail.png"
-banner: "http://localhost:4000/assets/img/projects/yen/header.png"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/projects/yen/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/projects/yen/header.png"
 overview: |
     A website created to support the activites of a NPO of 'Youth Empowering Nation' in marketing and advertising.
 roles: "Sole developer and designer"
@@ -30,6 +30,6 @@ details:
               - Informing stakeholders and donors of YEN's activities in Haiti.<br>
               - Online donation can be possbile thru the YEN website.
             images:
-                - url: "http://localhost:4000/assets/img/projects/yen/main_screen1.jpg"
+                - url: "https://soo1017.github.io/soolee/assets/img/projects/yen/main_screen1.jpg"
                   caption: Haiti Bus
                   setname: screens

@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/execution_context"
+url: "https://soo1017.github.io/soolee/javascript/js/execution_context"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Execution Context"
 details:
     - title: "Definition"
@@ -41,32 +41,32 @@ details:
               The picture below shows a execution context stack (ECS) based on the JS code above. When the JS engine runs the code above, it creates a global execution context (GEC) and insert it into execution context stack (ECS). In the creation phase of GEC, memory spaces are saved for the variable 'a' and the fucntion 'b()'.<br>
               The JS engine handles diffrently between variable and fucntion when saving them. A memory space is reserved for variable only without assigning its value in the memory space. So it is set as 'undefined'. But the code of function is saved in the memory reserved for the function. Note that a funtion is an object.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/execution_context/execution_context1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/execution_context/execution_context1.png"
                   caption: Execution Context Stack - A Created GEC in ECS
                   setname: screens
           - text: |
               After the creation phase of GEC, the JS engine moves into the execution phase of GEC. It reads and excute one line at a time from the beginning of the code. When it hits the statement 'b()', it needs to calls the function 'b()', which means creating a FEC with saving some memory space for its variables and functions if any. The picture below depicts that the FEC of fucntion 'b()' is created and inserted into the ECS. The FEC does not save any memory for its variables and functions because there are no variables and functions. It has an outer environment because it is not GEC.<br>
               After the creation phase of FEC, the JS engine transits into the execution phase of FEC. It runs only statement 'console.log("Hi World")' in the function 'b()' and prints out 'Hi World'. 
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/execution_context/execution_context2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/execution_context/execution_context2.png"
                   caption: Execution Context Stack - A Created FEC in ECS
                   setname: screens
           - text: |
               All operations are done with FEC now and ready to move out from ECS. The outer environment does not do anything because it does not have any scope search for the function 'b()'.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/execution_context/execution_context3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/execution_context/execution_context3.png"
                   caption: Execution Context Stack - A FEC ejected from ECS
                   setname: screens
           - text: |
               After the FEC is out from the ECS, the execution phase of GEC continues with the second statement 'console.log(a)'. The memory space for the variable 'a' is reserved, but there is not stored any value in it as mentioned early. Simply the variable 'a' is set as 'undefined'. So it will print out 'undefined' instead of 'Hello World!'. The JS engine moves into the expression 'var a = "Hello World!"' and executes the assignment expression. Now the memory space for the variable 'a' has the value 'Hello World!'. The picture shows that only GEC is left in the ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/execution_context/execution_context4.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/execution_context/execution_context4.png"
                   caption: Execution Context Stack - A GEC in ECS
                   setname: screens
           - text: |
               After hitting the function declaration statement, the JS engine is done with GEC. The GEC is ejected from ECS. Now ECS is empty. The JS engine completes the execution of the above code.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/execution_context/execution_context5.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/execution_context/execution_context5.png"
                   caption: Execution Context Stack - A GEC Ejected from ECS
                   setname: screens
           - text: |

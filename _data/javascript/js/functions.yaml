@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/functions"
+url: "https://soo1017.github.io/soolee/javascript/js/functions"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Functions"
 details:
     - title: "Definition"
@@ -19,13 +19,13 @@ details:
           - text: |
               Fucntions are objects. Two pictures are pretty much similar in their structure. Functions have all the characteristics of objects. They can have 'primitive' property, 'object' property, and 'function' method like objects. Additionally, they have their name or no name, and invocable code. The invocable code is a property of functions.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/object/object1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/object/object1.png"
                   caption: Object in JS
                   setname: screens
           - text: |
 
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/functions/function1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/functions/function1.png"
                   caption: Functions in JS
                   setname: screens
           - text: |
@@ -53,7 +53,7 @@ details:
                 - url: "https://gist.github.com/soo1017/8893b02e2b8d62e9bb36e14911bb887b.js"
                   caption: Fucntin Statement Code
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/functions/function2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/functions/function2.png"
                   caption: Fucntin Statement in JS
                   setname: screens
           - text: |
@@ -64,7 +64,7 @@ details:
                 - url: "https://gist.github.com/soo1017/04274ec54a52df020008f70ddcbd4cd7.js"
                   caption: Fucntin Expression Code
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/functions/function3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/functions/function3.png"
                   caption: Fucntin Expression in JS
                   setname: screens
           - text: |

@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/js_code_start"
+url: "https://soo1017.github.io/soolee/javascript/js/js_code_start"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "What happens when a JS code starts?"
 details:
     - title: "Description"
@@ -9,13 +9,13 @@ details:
           - text: |
               In this section, we will see what will happen when a Javascript code starts running. When a JS code (even with empty JS code) starts running, the Javascript engine automatically creats and runs a basic (global) execution context, which is a wrapper where the code is running. Generally, more execution contexts will be created and run during when the code is running. In the above, the 'global' is mentioned, which means that it is accessible from everywhere and everything in the code. Another meaning of 'global' in JS is 'not inside a function'. The global execution context has two things, global object and the special variable 'this' as default. The picture below depicts the flow of when a JS code starts running. 
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/js_code_start/global_execution_context.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/js_code_start/global_execution_context.png"
                   caption: Global Execution Context
                   setname: screens
           - text: |
               For 'this' variable, In Chrome or other internet browsers, it ponits to the global object 'window' where the 'object' means a collection of name and its value in JS. In global level, 'this' and the global object 'window' are equal. But the variable 'this' points to another thing in different case. For example, it will point to other in NodeJS in the server. Please note that each tap of any browser will create its own global execution context
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/js_code_start/this_variable.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/js_code_start/this_variable.png"
                   caption: \this\ in Chrome
                   setname: screens
           - text: |
@@ -31,13 +31,13 @@ details:
               <br>
               The variable 'a' and function 'b' would be a global object and they are attached to the global object 'window'. You can see it from the picture below where the circled parts show that the variable 'a' and the function 'b' are attached to the 'window' object when it is unfolded.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/js_code_start/window_object.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/js_code_start/window_object.png"
                   caption: Window Global Object and its Objects 
                   setname: screens
           - text: |
               As mentioned early, more execution contexts are created and come. When there is a function in the code, a execution context will be created for the function call or invocation. Unlike gloabl execution context, this execution context will have a link 'outer environment' to reach out outside the execution context.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/js_code_start/execution_context4func.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/js_code_start/execution_context4func.png"
                   caption: Execution Context
                   setname: screens
 

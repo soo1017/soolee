@@ -1,21 +1,21 @@
 title: "Hobby"
-url: "http://localhost:4000/hobby"
+url: "https://soo1017.github.io/soolee/hobby"
 subtitle: "Life is easy and peaceful with hobby"
-thumbnail: "http://localhost:4000/assets/img/learnings/hobby/thumbnail.png"
-banner: "http://localhost:4000/assets/img/learnings/hobby/main_header.png"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/learnings/hobby/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/hobby/main_header.png"
 content_title: "Working On Now"
 details:
     # - proglang: "Javascript"
     #   topics:
-    #     - link: "http://localhost:4000/hobby/javascript/syntax_parser"
+    #     - link: "https://soo1017.github.io/soolee/hobby/javascript/syntax_parser"
     #       name: "Syntax Parser"
-    #     - link: "http://localhost:4000/hobby/tech/javascript/java_topic2"
+    #     - link: "https://soo1017.github.io/soolee/hobby/tech/javascript/java_topic2"
     #       name: "Java Topic 2"
     # - proglang: "Python"
     #   topics:
-    #     - link: "http://localhost:4000/hobby/tech/python/py_parser"
+    #     - link: "https://soo1017.github.io/soolee/hobby/tech/python/py_parser"
     #       name: "Py Parser"
-    #     - link: "http://localhost:4000/hobby/tech/python/py_topic2"
+    #     - link: "https://soo1017.github.io/soolee/hobby/tech/python/py_topic2"
     #       name: "Py Topic 2"
 
     

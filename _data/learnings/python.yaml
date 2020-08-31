@@ -1,12 +1,12 @@
 title: "Python"
-url: "http://localhost:4000/python"
+url: "https://soo1017.github.io/soolee/python"
 subtitle: "Life flourishes with programming language learning"
-thumbnail: "http://localhost:4000/assets/img/learnings/python/thumbnail.png"
-banner: "http://localhost:4000/assets/img/learnings/python/main_header.png"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/learnings/python/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/python/main_header.png"
 content_title: "Working On Now"
 details:
     # - proglang: "Python"
     #   topics:
-    #     - link: "http://localhost:4000/python/py/js_code_start"
+    #     - link: "https://soo1017.github.io/soolee/python/py/js_code_start"
     #       name: ""
     

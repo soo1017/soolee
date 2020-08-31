@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/type"
+url: "https://soo1017.github.io/soolee/javascript/js/type"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Javascript Type"
 details:
     - title: "Definition"
@@ -45,7 +45,7 @@ details:
                 - url: "https://gist.github.com/soo1017/142ef906a41f2af73302e95624deeabc.js"
                   caption: Primitive is immutable, but replacable
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/type/primitive1.png"
                   caption: Execution Context Stack - A GEC popped in ECS
                   setname: screens
           - text: |
@@ -69,7 +69,7 @@ details:
               <strong>11.</strong> 'function addTwo2() {...}': => ignore<br>
               <strong>12.</strong> 'addTwo(myVar)': => 'addTwo(myVar)' function call or invocation craetes FEC of 'addTwo(myVar)' and pops into ECS.<br>
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/type/primitive2.png"
                   caption: Execution Context Stack - A FEC-addTwo(myVar) popped in ECS
                   setname: screens
           - text: |
@@ -83,7 +83,7 @@ details:
               <br>
               <strong>FEC-addTwo(num) is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of GEC</strong> and continues.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/type/primitive3.png"
                   caption: Execution Context Stack - A FEC-addTwo(myVar) popped out from ECS
                   setname: screens
           - text: |
@@ -91,13 +91,13 @@ details:
               <br>
               <strong>15.</strong> 'console.log(myVar)': => print out the value '5' of the variable 'myVar' in the scope of GEC.<br>
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive31.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/type/primitive31.png"
                   caption: Execution Context Stack - Excution Phase of GEC in ECS
                   setname: screens
           - text: |
               <strong>16.</strong> 'addTwo2(myVar)': => 'addTwo2(myVar)' function call or invocation craetes FEC of 'addTwo2(myVar)' and pops into ECS.<br>
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive4.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/type/primitive4.png"
                   caption: Execution Context Stack - A FEC-addTwo2(myVar) popped into ECS
                   setname: screens
           - text: |
@@ -111,7 +111,7 @@ details:
               <br>
               <strong>FEC-addTwo2(myVar) is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of GEC</strong> and continues.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/type/primitive31.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/type/primitive31.png"
                   caption: Execution Context Stack - A FEC-addTwo(myVar) popped out from ECS
                   setname: screens
           - text: |

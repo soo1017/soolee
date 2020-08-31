@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/functional_prog_example1"
+url: "https://soo1017.github.io/soolee/javascript/js/functional_prog_example1"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Functional Programming Examples with HTML and CSS"
 details:
     - title: "An Example 1"
@@ -33,7 +33,7 @@ details:
               The 'mealRow' function has two input parameters, 'className' and 'value'. Using the closure, the function 'mealRow' is called by assigning one parameter with its specific value. It can be accomplished with Ramda's partial function. The 'partial' and 'mealRow' function will be called as many as the number of items in the array, which is the second parameter. The data in the invoked function 'mealRow' will remain in its memory and be used for the invocation of another function over which the function 'mealRow' physically sits using scope chain and closure.<br>
               The picture below depicts the output of the function 'mealBody'. It shows all data of the constant 'MEALS' in the form of table successfully.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example1.png"
                   caption: Output of the Function 'mealBody'
                   setname: screens
           - text: |
@@ -46,7 +46,7 @@ details:
               The statement is 'R.reduce(R.add, 0, R.map(value => value.calories, value))'. The 'map' function returns the array of values of calories in the 'MEALS' constant array. The 'add' function is to add two items from the array at a time. The 'reduce' function is to continue adding items of the array until the last item with the initial value, 0. The 'reduce' function returns the final sum of addition of items in the array of calories.<br>
               After computing the total of calories and creating the row of displaying the total of calories, the row is appended to the meal part using 'const rows1 = R.append(totalRow('bt b', meals), rows)', and then the body part of the table is created by 'return tbody({className}, rows1)'. The output of the code is depicted below with the total computed and displayed.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example2.png"
                   caption: Output of the Function 'mealBody' - Updated
                   setname: screens
           - text: |
@@ -62,7 +62,7 @@ details:
           - text: |
               The 'tableBody' function is to combine the body and header part of the table in order to complete the table. The image below is to show the output of the code. This is how functional programming works with HTML and CSS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/functional_prog_example1/functional_prog_example3.png"
                   caption: Output of Code
                   setname: screens
     - title: "An Example 2"

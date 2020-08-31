@@ -1,7 +1,7 @@
 title: "Food Truck 1"
 subtitle: "Food Truck - Handlebar & NodeJS"
-thumbnail: "http://localhost:4000/assets/img/projects/foodtruck1/thumbnail.png"
-banner: "http://localhost:4000/assets/img/projects/foodtruck1/header.png"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck1/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck1/header.png"
 overview: |
     A responsive and dynamic web application to implement the online-order of food truck designed by Handlebar in front-end and NodeJS in back-end.
 roles: "Sole developer and designer"
@@ -33,6 +33,6 @@ details:
               - All data (the total number of online order, the number of each menu order, the amount of money by online-order, ...) related to online order is automatically collected and stored into DB with MongoDB. The data can be seen and managed anytime in the admin webpages with an admin authority.<br>
               - Customers can see the updated quantity of menu when making an online order. When a menu runs out, the menu will have the sign "out of the stock".
             images:
-                - url: "http://localhost:4000/assets/img/projects/foodtruck1/main_screen1.gif"
+                - url: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck1/main_screen1.gif"
                   caption: Screen Shot
                   setname: screens

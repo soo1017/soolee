@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/iife"
+url: "https://soo1017.github.io/soolee/javascript/js/iife"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "IIFE"
 details:
     - title: "Definition"
@@ -37,7 +37,7 @@ details:
                 - url: "https://gist.github.com/soo1017/0905d52334aa5734386b301c3b4b6ccd.js"
                   caption: IIFE
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/iife/iife1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/iife/iife1.png"
                   caption: Execution Context Stack - IIFE(No Access to Variables)
                   setname: screens
           - text: |
@@ -50,7 +50,7 @@ details:
               <br>
               <strong>2.</strong> '(function () {...})()': => invoke the function, craetes FEC of '()' and it pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/iife/iife2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/iife/iife2.png"
                   caption: Execution Context Stack - IIFE(No Access to Variables)
                   setname: screens
           - text: |

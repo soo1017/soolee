@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/value_reference"
+url: "https://soo1017.github.io/soolee/javascript/js/value_reference"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "By Value & By Reference"
 details:
     - title: "Definition"
@@ -13,13 +13,13 @@ details:
           - text: |
               For a primitive (Boolean, String, Number, Null, Undefined, Symbol) is assigned to a variable, the variable will have an address of memory space of the primitive. It is explained previously. When the variable is assigned to another varible by the equal "=", the new variable will have a copy of the primitive in a different memory space. The new variable will a different memory address from the existing variable, but they have the same value. The image below shows it. 
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/value_reference/value_reference1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/value_reference/value_reference1.png"
                   caption: By Value
                   setname: screens
           - text: |
               For an object (including functions) is assigned to a variable, the variable will have an address of memory space of the object like primitives. When the variable is assigned to another varible by the equal "=", the new variable will point to the same memory address where the existing varible points to. I think that using address reference approach instead of saving same value in another physical memory space could save overall memory usage because objects (including functions) is larger than primitive to save them.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/value_reference/value_reference2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/value_reference/value_reference2.png"
                   caption: By Reference
                   setname: screens
           - text: |

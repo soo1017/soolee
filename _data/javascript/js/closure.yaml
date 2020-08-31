@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/closure"
+url: "https://soo1017.github.io/soolee/javascript/js/closure"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Closures"
 details:
     - title: "Definition"
@@ -21,7 +21,7 @@ details:
           - text: |
               Let us trace the first code (not closure) with its execution context.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/notclosure1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/notclosure1.png"
                   caption: Execution Context Stack - Not Closure 1
                   setname: screens
           - text: |
@@ -42,7 +42,7 @@ details:
               <br>
               The image below depicts that when FEC of '_ => console.log(c)' gets the value of 'c' from the global level using scope chain. Therefore, the code will print out '8' 5 times.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/notclosure2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/notclosure2.png"
                   caption: Execution Context Stack - Not Closure 2
                   setname: screens
           - text: |
@@ -50,7 +50,7 @@ details:
               <br>
               Let us trace the second code (closure) with its execution context.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure0.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure0.png"
                   caption: Execution Context Stack - Closure 1
                   setname: screens
           - text: |
@@ -82,37 +82,37 @@ details:
               <br>
               The JS engine repeats steps of from 6 to 9 five times. The images below can explains it clearly
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure1.png"
                   caption: Execution Context Stack - Closure 2
                   setname: screens
           - text: |
               
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure2.png"
                   caption: Execution Context Stack - Closure 3
                   setname: screens
           - text: |
               
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure3.png"
                   caption: Execution Context Stack - Closure 4
                   setname: screens
           - text: |
               
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure4.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure4.png"
                   caption: Execution Context Stack - Closure 5
                   setname: screens
           - text: |
               
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure5.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure5.png"
                   caption: Execution Context Stack - Closure 6
                   setname: screens
           - text: |
               After finishing for loop execution, ECS will be like in the image below. FEC-iife goes in and off ECS 5 times, but leaves their variables and values in their memory. Now back to the execution phase of GEC.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure6.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure6.png"
                   caption: Execution Context Stack - Closure 7
                   setname: screens
           - text: |
@@ -130,13 +130,13 @@ details:
               <br>
               The JS engine repeats steps of Creation and Execution phases of FEC-(_ => console.log(c)) five timee from arry[0] ... arry[4]. Two images below shows it. It prints out '0, 2, 4, 6, 8' sequentially. Then back to GEC and end the code.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure7.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure7.png"
                   caption: Execution Context Stack - Closure 8
                   setname: screens
           - text: |
 
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure8.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure8.png"
                   caption: Execution Context Stack - Closure 9
                   setname: screens
           - text: |
@@ -158,7 +158,7 @@ details:
               * ignore 'greet(...)'<br>
               * execute 'greet('Hi')' and call the function 'greet('Hi')'. Move into the creation phase of FEC - greet('Hi').
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure21.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure21.png"
                   caption: Execution Context Stack - Closure 10
                   setname: screens
           - text: |
@@ -172,7 +172,7 @@ details:
               * set the argument 'c' as 'Hi'<br>
               * execute 'return f(...)' by returning the function and back to the execution phase of GEC.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure22.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure22.png"
                   caption: Execution Context Stack - Closure 11
                   setname: screens
           - text: |
@@ -181,7 +181,7 @@ details:
               * assign the returned function into the variable 'newGreet'<br>
               * execute 'newGreet('Sam')' and call the function 'newGreet('Sam')'. Move into the creation phase of FEC - newGreet('Sam').
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure23.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure23.png"
                   caption: Execution Context Stack - Closure 12
                   setname: screens
           - text: |
@@ -197,7 +197,7 @@ details:
               <br>
               The JS engine prints out 'Hi Sam'. It is called closure.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure23.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure23.png"
                   caption: Execution Context Stack - Closure 12
                   setname: screens
           - text: |
@@ -236,7 +236,7 @@ details:
               <br>
               The image below shows how the JS engine gets the value of 'lang' for FEC - greetSpanish(...) using scope chain and closure. Any function created inside of the function will point to the execution context of the function.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure31.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure31.png"
                   caption: Execution Context Stack - Closure 13
                   setname: screens
           - text: |
@@ -285,7 +285,7 @@ details:
               <br>
               The image below depicts the closure and scope chain using outer environment reference.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/closure/closure32.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/closure/closure32.png"
                   caption: Execution Context Stack - Closure 14
                   setname: screens
 

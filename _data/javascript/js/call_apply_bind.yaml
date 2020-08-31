@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/call_apply_bind"
+url: "https://soo1017.github.io/soolee/javascript/js/call_apply_bind"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "call(), apply(), and bind()"
 details:
     - title: "Definition"
@@ -13,13 +13,13 @@ details:
               <br>
               The first image shows function execution contexts containing 'variable' environment, 'this' variable, and 'outer' ebvironment.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/call_apply_bind/call_apply_bind1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/call_apply_bind/call_apply_bind1.png"
                   caption: Object and 'this'
                   setname: screens
           - text: |
               The second image depicts functions and their access to special methods, 'call()', 'apply()', and 'bind()'.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/call_apply_bind/call_apply_bind2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/call_apply_bind/call_apply_bind2.png"
                   caption: Functions and Their Special Methods
                   setname: screens
     - title: "Description"

@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/scope_chain"
+url: "https://soo1017.github.io/soolee/javascript/js/scope_chain"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Scope Chain"
 details:
     - title: "Definition"
@@ -33,7 +33,7 @@ details:
               <br>
               Let us dig more into the code above line by line to fully understand 'variable environment', 'outer environment', and 'lexical environment'.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/variable_environment1.png"
                   caption: Execution Context Stack - A Created GEC in ECS
                   setname: screens
           - text: |
@@ -57,7 +57,7 @@ details:
               <strong>10.</strong> 'console.log(myVar)': => print out the value '1' of the variable 'myVar'.<br>
               <strong>11.</strong> 'a()': => 'a()' function call or invocation craetes FEC of 'a()' and pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/variable_environment2.png"
                   caption: Execution Context Stack - A Created FEC-a() in ECS
                   setname: screens
           - text: |
@@ -73,7 +73,7 @@ details:
               <strong>16.</strong> 'console.log(myVar)': => print out the value '2' of the variable 'myVar' in the scope of FEC-a().<br>
               <strong>17.</strong> 'b()': => 'b()' function call or invocation craetes FEC of 'b()' and pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/variable_environment3.png"
                   caption: Execution Context Stack - A Created FEC-b() in ECS
                   setname: screens
           - text: |
@@ -89,7 +89,7 @@ details:
               <br>
               <strong>FEC-b() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of FEC-a()</strong> and continues.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment4.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/variable_environment4.png"
                   caption: Execution Context Stack - A FEC-b() popped out from ECS
                   setname: screens
           - text: |
@@ -97,7 +97,7 @@ details:
               <br>
               <strong>FEC-a() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of GEC</strong> and continues.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment5.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/variable_environment5.png"
                   caption: Execution Context Stack - A FEC-a() popped out from ECS
                   setname: screens
           - text: |
@@ -106,7 +106,7 @@ details:
               <strong>22.</strong> 'console.log(myVar)': => print out the value '1' of the variable 'myVar' in the scope of GEC.<br>
               <strong>GEC is poped out from ECS</strong> because its work is done. ECS is empty now.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/variable_environment6.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/variable_environment6.png"
                   caption: Execution Context Stack - A GEC popped out from ECS
                   setname: screens
           - text: |
@@ -135,7 +135,7 @@ details:
               <br>
               Let us check the above code line by line with its execution contexts considering the scope chain.<br>
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain1.png"
                   caption: Execution Context Stack - A Created GEC in ECS
                   setname: screens
           - text: |
@@ -156,7 +156,7 @@ details:
               <strong>7.</strong> 'var myVar = 1': => assign the value '1' into a memory space for the variable 'myVar'.<br>
               <strong>8.</strong> 'a()': => 'a()' function call or invocation craetes FEC of 'a()' and it pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain2.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain2.png"
                   caption: Execution Context Stack - A Created FEC-a() in ECS
                   setname: screens  
           - text: |
@@ -170,7 +170,7 @@ details:
               <strong>11.</strong> 'var myVar = 2': => assign the value '2' into a memory space for the variable 'myVar' in the scope of FEC-a().<br>
               <strong>12.</strong> 'b()': => 'b()' function call or invocation craetes FEC of 'b()' and pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain3.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain3.png"
                   caption: Execution Context Stack - A Created FEC-b() in ECS
                   setname: screens
           - text: |
@@ -184,7 +184,7 @@ details:
               <br>
               <strong>FEC-b() is poped out from ECS</strong> because its work is done. Back to <strong>the execution phase of FEC-a()</strong> and continues.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain4.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain4.png"
                   caption: Execution Context Stack - A FEC-b() popped out from ECS
                   setname: screens
           - text: |
@@ -206,7 +206,7 @@ details:
               <br>
               Let us check the case that is mentioned right above to see what will happen with the code above.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain21.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain21.png"
                   caption: Execution Context Stack - A Created GEC in ECS
                   setname: screens
           - text: |
@@ -225,7 +225,7 @@ details:
               <strong>5.</strong> 'var myVar = 1': => assign the value '1' into a memory space for the variable 'myVar'.<br>
               <strong>6.</strong> 'a()': => 'a()' function call or invocation craetes FEC of 'a()' and it pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain22.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain22.png"
                   caption: Execution Context Stack - A Created FEC-a() in ECS
                   setname: screens
           - text: |
@@ -241,7 +241,7 @@ details:
               <strong>11.</strong> 'var myVar = 2': => assign the value '2' into a memory space for the variable 'myVar' in the scope of FEC-a().<br>
               <strong>12.</strong> 'b()': => 'b()' function call or invocation craetes FEC of 'b()' and pops into ECS.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/scope_chain/scope_chain23.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/scope_chain/scope_chain23.png"
                   caption: Execution Context Stack - A Created FEC-b() in ECS
                   setname: screens
           - text: |

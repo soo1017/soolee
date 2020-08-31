@@ -1,7 +1,7 @@
 title: "Javascript Learning"
-url: "http://localhost:4000/javascript/js/object"
+url: "https://soo1017.github.io/soolee/javascript/js/object"
 subtitle: "Life flourishes with programming language learning"
-banner: "http://localhost:4000/assets/img/learnings/javascript/header.png"
+banner: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/header.png"
 content_title: "Object"
 details:
     - title: "Definition"
@@ -14,7 +14,7 @@ details:
               Objects are variables. Variables are set with memory space and objects set with memory space as well.<br>
               Objects have 'primitive' property, 'object' property, and their 'function' method. Objects have their address reference to their properties and methods as in the picture.
             images:
-                - url: "http://localhost:4000/assets/img/learnings/javascript/object/object1.png"
+                - url: "https://soo1017.github.io/soolee/assets/img/learnings/javascript/object/object1.png"
                   caption: Object in JS
                   setname: screens
           - text: |
