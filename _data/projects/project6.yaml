@@ -4,7 +4,7 @@ thumbnail: "https://soo1017.github.io/soolee/assets/img/projects/rca_scheduler/t
 banner: "https://soo1017.github.io/soolee/assets/img/projects/rca_scheduler/header.png"
 overview: |
     A Python-based tool to automate the process of creating a schedule of USPS RCA's (Rural Carrier Associate) routes assignment weekly
-roles: "Creator and Sole tool developer"
+roles: "Creator and Tool developer"
 links:
     - label: "GitHub"
       link: "https://github.com/soo1017/rca_scheduler"
