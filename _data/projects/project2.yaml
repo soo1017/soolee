@@ -1,9 +1,12 @@
 title: "Food Truck 1"
+totaltitle: "Food Truck"
 subtitle: "Food Truck - Handlebar & NodeJS"
 thumbnail: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck1/thumbnail.png"
 banner: "https://soo1017.github.io/soolee/assets/img/projects/foodtruck1/header.png"
 overview: |
     A responsive and dynamic web application to implement the online-order of food truck designed by Handlebar in front-end and NodeJS in back-end.
+totaloverview: |
+    A responsive and dynamic web application to implement the online-order of food truck designed by 1. Handlebar/NodeJS, 2. AngularJS/NodeJS, 3. ASP.NET in front/back-end.
 roles: "Software developer and Designer"
 links:
     - label: "GitHub"
