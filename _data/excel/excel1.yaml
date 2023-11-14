@@ -1,1 +1,28 @@
-
+title: "RCA Scheduler"
+subtitle: "USPS RCA Scheduler - Excel Macro"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/excel/rca_sch/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/excel/rca_sch/header.png"
+overview: |
+    A macro-enable Excel program to make USPS RCA (Rural Carrier Associate) scheduler weekly.
+roles: "Excel Developer"
+links:
+    - label: "GitHub"
+      link: "https://github.com/soo1017/rca_sch_excel"
+tools:
+    - Excel
+description: |
+    An Excel program that enables RCA weekly scheduler using <strong>Macro</strong> and <strong>VBA (Visual Basic for Application)</strong>.
+details:
+    - title: "USPS RCA Scheduler"
+      subsections:
+          - text: |
+              The Excel program has the following features.<br>
+              <br>
+              - It is Macro-enabled.<br>
+              - Hide items in the drop-down that are already used.<br>
+              - Evaluate the value of the total selected routes for each RCA.<br>
+              - Buttons are used to enable Macros
+            images:
+                - url: "https://soo1017.github.io/soolee/assets/img/excel/rca_sch/rca_sch.png"
+                  caption: Screen Shot 1
+                  setname: screens
