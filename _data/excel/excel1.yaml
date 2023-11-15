@@ -9,19 +9,19 @@ links:
     - label: "GitHub"
       link: "https://github.com/soo1017/rca_sch_excel"
 tools:
-    - Excel
+    - MS Excel
 description: |
-    An Excel program that enables RCA weekly scheduler using <strong>Macro</strong> and <strong>VBA (Visual Basic for Application)</strong>.
+    An Excel program that makes the RCA weekly schedule using <strong>Macro</strong> and <strong>VBA (Visual Basic for Application)</strong>. Buttons are used to get connected to Macro to run its Macro. Automated to make a RCA weekly schedule to save time and effort.
 details:
     - title: "USPS RCA Scheduler"
       subsections:
           - text: |
               The Excel program has the following features.<br>
               <br>
-              - It is Macro-enabled.<br>
+              - Macro-enabled.<br>
               - Hide items in the drop-down that are already used.<br>
               - Evaluate the value of the total selected routes for each RCA.<br>
-              - Buttons are used to enable Macros
+              - Buttons are used to enable Macro.
             images:
                 - url: "https://soo1017.github.io/soolee/assets/img/excel/rca_sch/rca_sch.png"
                   caption: Screen Shot 1
