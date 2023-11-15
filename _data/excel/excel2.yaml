@@ -1,0 +1,28 @@
+title: "Church Offering/Expense Monthly Report"
+subtitle: "Church Monthly Financial Report - Excel Macro"
+thumbnail: "https://soo1017.github.io/soolee/assets/img/excel/churchofferingfinancereport/thumbnail.png"
+banner: "https://soo1017.github.io/soolee/assets/img/excel/churchofferingfinancereport/header.png"
+overview: |
+    A macro-enable Excel program to make church monthly finance report with offering income and expense.
+roles: "Excel Developer"
+links:
+    - label: "GitHub"
+      link: "https://github.com/soo1017/church_offering_excel"
+tools:
+    - MS Excel
+description: |
+    An Excel program that makes the church monthly finance report with offering and expense using <strong>Macro</strong> and <strong>VBA (Visual Basic for Application)</strong>. Buttons and userforms are used for users to easily manage data input and to see expense clearly. Automated as much as possible to minimize users' interference and to save their time and effort.
+details:
+    - title: "Church Offering/Expense Monthly Report"
+      subsections:
+          - text: |
+              The Excel program has the following features.<br>
+              <br>
+              - Macro-enabled.<br>
+              - Extract offering data into the monthly report automatically.<br>
+              - Separate fixed items and non-fixed items in the expense for each department.<br>
+              - Buttons and useforms are used to enable Macro and make data input more visible and easier respectively.
+            images:
+                - url: "https://soo1017.github.io/soolee/assets/img/excel/churchofferingfinancereport/churchoffering.png"
+                  caption: Screen Shot 1
+                  setname: screens
